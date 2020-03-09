@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Testng Cucumber Suite" parallel="none">
+  <test name="Run All Tests on iOS">
+  	<parameter name="browser" value="iOS"></parameter>
+  <classes>
+  <class name="main.CucumberRunner"></class>
+  </classes>
+  
+  </test>
+  <test name="Run All Tests on Android"> 
+   	<parameter name="browser" value="Android"></parameter> 
+   <classes> 
+   <class name="main.CucumberRunner"></class> 
+   </classes> 
+  
+  </test>  
+</suite> 

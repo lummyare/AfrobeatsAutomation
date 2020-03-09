@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Testng Cucumber Suite]" parallel="none">
+  <parameter name="browser" value="Android"/>
+  <test name="Run All Tests on iOS(failed)" parallel="none">
+    <parameter name="browser" value="iOS"/>
+    <classes>
+      <class name="main.CucumberRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="closebrowser"/>
+          <include name="setUpClass"/>
+          <include name="closebrowser"/>
+          <include name="feature" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="openBroswer"/>
+          <include name="openBroswer"/>
+          <include name="tearDownClass"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- main.CucumberRunner -->
+    </classes>
+  </test> <!-- Run All Tests on iOS(failed) -->
+  <test name="Run All Tests on Android(failed)" parallel="none">
+    <parameter name="browser" value="Android"/>
+    <classes>
+      <class name="main.CucumberRunner">
+        <methods>
+          <include name="setUpClass"/>
+          <include name="closebrowser"/>
+          <include name="setUpClass"/>
+          <include name="closebrowser"/>
+          <include name="feature" invocation-numbers="0 1 2 3 4 5 6 7 8 9"/>
+          <include name="openBroswer"/>
+          <include name="openBroswer"/>
+          <include name="tearDownClass"/>
+          <include name="tearDownClass"/>
+        </methods>
+      </class> <!-- main.CucumberRunner -->
+    </classes>
+  </test> <!-- Run All Tests on Android(failed) -->
+</suite> <!-- Failed suite [Testng Cucumber Suite] -->
