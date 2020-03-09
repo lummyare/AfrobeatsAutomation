@@ -68,7 +68,7 @@ public class MultipleSessions extends MusicPad
 				.getText();
 				if (newSessionName.equals(sessionName))
 				{
-					//sessionList.add(sessionName);
+					
 					result = true;
 				}
 				else
@@ -76,6 +76,8 @@ public class MultipleSessions extends MusicPad
 					result = false;
 				}
 				boolean loadResult = editMusicPad.verifyLoadMusicToPad();
+				findWebElementByIDAndClick(musicPadObjects.freesamplesback);
+				findWebElementByIDAndClick(musicPadObjects.editPads);	
 				boolean playTrackResult = editMusicPad.playAllAddedTrack();
 
 				if (loadResult && playTrackResult && result)
