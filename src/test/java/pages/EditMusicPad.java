@@ -328,7 +328,7 @@ public class EditMusicPad extends Core {
 				findWebElementByIDAndClick(musicPadObjects.settingButton);
 				findWebElementByIDAndClick(musicPadObjects.backButtonSetting);
 				int i = 0;
-				for (int z = 0; z <= Integer.parseInt(cucumberRunner.iosloopcount); z++) 
+				for (int z = 0; z <= 150; z++) 
 				{
 
 					try {
