@@ -1,5 +1,6 @@
 package pages;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.Keys;
@@ -15,10 +16,11 @@ import pageObjects.SessionObjects;
 public class MultipleSessions extends MusicPad
 {
 
-	List<String> sessionList = null;
+	List<String> sessionList = new ArrayList<String>();
 	SessionObjects sessionObjects = new SessionObjects();
 	MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
 	MusicPadObjects musicPadObjects = new MusicPadObjects();
+	
 	EditMusicPad editMusicPad = new EditMusicPad(driver);
 	public MultipleSessions(AppiumDriver<MobileElement> driver)
 	{
@@ -43,6 +45,7 @@ public class MultipleSessions extends MusicPad
 	{
 		try
 		{
+			sessionList.add("African Kit");
 			boolean result = true;
 			for (int i = 1; i <= number; i++)
 			{
@@ -60,6 +63,7 @@ public class MultipleSessions extends MusicPad
 				}
 				sessionObjects.sessionNameTextBox.clear();
 				sessionObjects.sessionNameTextBox.sendKeys(newSessionName);
+				sessionList.add(newSessionName);
 				if(driver.getPlatformName().equalsIgnoreCase("iOS"))
 					findWebElementByIDAndClick(sessionObjects.openButtonSessions);
 				findWebElementByIDAndClick(sessionObjects.openButtonSessions);

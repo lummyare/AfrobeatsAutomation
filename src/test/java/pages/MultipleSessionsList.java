@@ -1,5 +1,7 @@
 package pages;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 
 import org.openqa.selenium.support.PageFactory;
@@ -18,6 +20,7 @@ public class MultipleSessionsList extends MusicPad
 	SessionObjects sessionObjects = new SessionObjects();
 	MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
 	MusicPadObjects musicPadObjects = new MusicPadObjects();
+	MultipleSessions multipleSessions=new MultipleSessions(driver);
 
 	public MultipleSessionsList(AppiumDriver<MobileElement> driver)
 	{
@@ -30,9 +33,14 @@ public class MultipleSessionsList extends MusicPad
 		musicPadObjects);
 	}
 
-	public void multipleSessionsList()
+	public boolean multipleSessionsList()
 	{
 		findWebElementByIDAndClick(sessionObjects.burgerMenu);
+		if(sessionObjects.sessionName.size()>0)
+			return true;
+		else
+			return false;
+		
 	}
 
 	public boolean verifyMutipleSession()
@@ -43,25 +51,25 @@ public class MultipleSessionsList extends MusicPad
 			boolean finalResult = true;
 			for (int i = 0; i < sessionObjects.sessionName.size(); i++)
 			{
-
-				findWebElementByIDAndClick(sessionObjects.sessionName.get(i));
-				if (sessionObjects.sessionName.get(i).equals(sessionObjects.sessionNameTextBox.getText()))
-
-				{
-					System.out.println("Created Session Verified");
-					findWebElementByIDAndClick(sessionObjects.openButtonSessions);
-					EditMusicPad ed = new EditMusicPad(driver);
-					finalResult = ed.playAllAddedTrack();
+				
+				if(sessionObjects.sessionName.get(i).getText().equals(multipleSessions.sessionList.get(i))) {
+					System.out.println("Sessions are present");
 				}
-
 				else
 				{
-					finalResult = false;
+					finalResult=false;
 					break;
 				}
-			}
-			return finalResult;
+				findWebElementByIDAndClick(sessionObjects.sessionName.get(i));
+				findWebElementByIDAndClick(sessionObjects.openButtonSessions);
+				EditMusicPad ed = new EditMusicPad(driver);
+				finalResult = ed.playAllAddedTrack();
+				findWebElementByIDAndClick(sessionObjects.burgerMenu);
 		}
+			return finalResult;
+			}
+			
+		
 		catch (Exception e)
 		{
 			System.out.println(e.getMessage());

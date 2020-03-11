@@ -1,5 +1,8 @@
 package pages;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -37,6 +40,9 @@ public class EditMusicPad extends Core {
 	List<String> sessionList = null;
 	int usedPads = 0;
 	int totalPads = 0;
+	InputStream inputStreamLoop;
+
+	public static Properties configLoop = null;
 
 	MusicPadObjects musicPadObjects = new MusicPadObjects();
 	CucumberRunner cucumberRunner = new CucumberRunner();
@@ -72,10 +78,22 @@ public class EditMusicPad extends Core {
 		try {
 			clickEditPads();
 			if (!checkElementDisplayed(musicPadObjects.sampleDirectoryTitle)) {
-				findWebElementByIDAndClick(musicPadObjects.freesamplesback);
+				if (driver.getPlatformName().equalsIgnoreCase("iOS")) {
+					JavascriptExecutor js = (JavascriptExecutor) driver;
+					Map<String, Object> params = new HashMap<String, Object>();
+					params.put("element", ((RemoteWebElement) musicPadObjects.trackListText.get(0)).getId());
+					params.put("direction", "up");
+					js.executeScript("mobile: swipe", params);
+					//findWebElementByIDAndClick(musicPadObjects.freesamplesback);
+				}
 
 			}
 			clickSampleDirectory();
+			if (driver.getPlatformName().equalsIgnoreCase("iOS")) {
+				clickEditPads();
+				clickEditPads();
+				//findWebElementByIDAndClick(musicPadObjects.freesamplesback);
+			}
 			usedPads = getNumberofusedPads();
 			int totalPads = getNumberofTotalPads();
 			musicTracklist.clear();
@@ -188,8 +206,9 @@ public class EditMusicPad extends Core {
 							break;
 						}
 					}
-					if (trackListLoop > numberOfVisible)
+					if (trackListLoop > numberOfVisible-1)
 						trackListLoop = 1;
+					wait(1);
 					findWebElementByIDAndClick(musicPadObjects.trackListText.get(trackListLoop));
 					try {
 						new SoftAssert().assertTrue(musicPadObjects.musicPadIcon.get(startIndex).getText()
@@ -268,8 +287,30 @@ public class EditMusicPad extends Core {
 
 	}
 
-	public boolean playAllAddedTrack() {
+	public boolean playAllAddedTrack()  {
 		try {
+			String iOSLoopCount="150";
+			try {
+			Properties prop = new Properties();
+			String propFileName = "config.properties";
+
+			inputStreamLoop = getClass().getClassLoader().getResourceAsStream(propFileName);
+
+			if (inputStreamLoop != null) {
+				prop.load(inputStreamLoop);
+			} else {
+				throw new FileNotFoundException("property file '" + propFileName + "' not found in the classpath");
+			}
+
+			
+			iOSLoopCount = prop.getProperty("IOS_Loop_Count");
+			}
+			catch(FileNotFoundException e) {
+				System.out.println("Exception: " + e);
+			}
+			finally {
+				inputStreamLoop.close();
+			}
 			boolean finalResult = true;
 			if (driver.getPlatformName().equalsIgnoreCase("Android")) {
 				try {
@@ -328,14 +369,14 @@ public class EditMusicPad extends Core {
 				findWebElementByIDAndClick(musicPadObjects.settingButton);
 				findWebElementByIDAndClick(musicPadObjects.backButtonSetting);
 				int i = 0;
-				for (int z = 0; z <= 150; z++) 
+				for (int z = 0; z <= Integer.parseInt(iOSLoopCount); z++) 
 				{
 
 					try {
-						findWebElementByIDAndClick(musicPadObjects.trackNamePad.get(i));
+						findWebElementByIDAndClick(musicPadObjects.musicPadIcon.get(i));
 						wait(2);
 						new SoftAssert().assertTrue(musicPadObjects.playPauseButton.isDisplayed());
-						findWebElementByIDAndClick(musicPadObjects.trackNamePad.get(i));
+						findWebElementByIDAndClick(musicPadObjects.musicPadIcon.get(i));
 						wait(2);
 						new SoftAssert().assertTrue(!musicPadObjects.playPauseButton.isDisplayed());
 						i++;
@@ -359,6 +400,7 @@ public class EditMusicPad extends Core {
 			System.out.println(e.getMessage());
 			return false;
 		}
+		
 
 	}
 
