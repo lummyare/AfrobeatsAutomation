@@ -4,8 +4,8 @@ import static org.testng.Assert.assertTrue;
 
 import org.testng.log4testng.Logger;
 
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import main.CucumberRunner;
 import pages.TapTempoButton;
 
@@ -17,7 +17,7 @@ public class TapTempo extends CucumberRunner
 	@When("^I enable Tap Tempo button from Settings$")
 	public void enableTapTempo()
 	{
-		if(driver.getPlatformName().equalsIgnoreCase("Android"))
+		if(main.Core.getPlatformName().equalsIgnoreCase("Android"))
 		tapTempoButton.enableTapTempoCheckBox();
 		else
 			System.out.println("Button is already enabled for iOS");

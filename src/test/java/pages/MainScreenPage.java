@@ -7,7 +7,7 @@ import java.util.List;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import main.Core;
 import pageObjects.MainScreenPageObject;
@@ -19,7 +19,7 @@ public class MainScreenPage extends Core
 	List<String> sessionList = null;
 	MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
 
-	public MainScreenPage(AppiumDriver<MobileElement> driver)
+	public MainScreenPage(AppiumDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver),

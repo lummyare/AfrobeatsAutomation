@@ -1,0 +1,49 @@
+src/test/java/pages/NormButton.java:5:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/NormButton.java:6:import io.appium.java_client.MobileElement;
+src/test/java/pages/NormButton.java:19:	public NormButton(AppiumDriver<MobileElement> driver) {
+src/test/java/pages/EditMusicPad.java:18:import org.openqa.selenium.interactions.touch.TouchActions;
+src/test/java/pages/EditMusicPad.java:23:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/EditMusicPad.java:24:import io.appium.java_client.MobileElement;
+src/test/java/pages/EditMusicPad.java:25:import io.appium.java_client.TouchAction;
+src/test/java/pages/EditMusicPad.java:52:	public EditMusicPad(AppiumDriver<MobileElement> driver) {
+src/test/java/pages/MainScreenPage.java:9:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/MainScreenPage.java:10:import io.appium.java_client.MobileElement;
+src/test/java/pages/MainScreenPage.java:22:	public MainScreenPage(AppiumDriver<MobileElement> driver)
+src/test/java/pages/ConfirmationPopUpPage.java:5:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/ConfirmationPopUpPage.java:6:import io.appium.java_client.MobileElement;
+src/test/java/pages/ConfirmationPopUpPage.java:16:	public ConfirmationPopUpPage(AppiumDriver<MobileElement> driver)
+src/test/java/pages/Cart.java:16:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/Cart.java:17:import io.appium.java_client.MobileElement;
+src/test/java/pages/Cart.java:30:	public Cart(AppiumDriver<MobileElement> driver) {
+src/test/java/pages/MusicPad.java:12:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/MusicPad.java:13:import io.appium.java_client.MobileElement;
+src/test/java/pages/MusicPad.java:28:	public MusicPad(AppiumDriver<MobileElement> driver) {
+src/test/java/pages/TapTempoButton.java:9:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/TapTempoButton.java:10:import io.appium.java_client.MobileElement;
+src/test/java/pages/TapTempoButton.java:22:	public TapTempoButton(AppiumDriver<MobileElement> driver)
+src/test/java/pages/MultipleSessions.java:9:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/MultipleSessions.java:10:import io.appium.java_client.MobileElement;
+src/test/java/pages/MultipleSessions.java:25:	public MultipleSessions(AppiumDriver<MobileElement> driver)
+src/test/java/pages/Slider.java:5:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/Slider.java:6:import io.appium.java_client.MobileElement;
+src/test/java/pages/Slider.java:19:	public Slider(AppiumDriver<MobileElement> driver)
+src/test/java/pages/MultipleSessionsList.java:9:import io.appium.java_client.AppiumDriver;
+src/test/java/pages/MultipleSessionsList.java:10:import io.appium.java_client.MobileElement;
+src/test/java/pages/MultipleSessionsList.java:25:	public MultipleSessionsList(AppiumDriver<MobileElement> driver)
+src/test/java/main/CucumberRunner.java:11:import org.openqa.selenium.remote.DesiredCapabilities;
+src/test/java/main/CucumberRunner.java:18:import io.appium.java_client.AppiumDriver;
+src/test/java/main/CucumberRunner.java:20:import io.appium.java_client.MobileElement;
+src/test/java/main/CucumberRunner.java:21:import io.appium.java_client.TouchAction;
+src/test/java/main/CucumberRunner.java:22:import io.appium.java_client.android.AndroidDriver;
+src/test/java/main/CucumberRunner.java:23:import io.appium.java_client.ios.IOSDriver;
+src/test/java/main/CucumberRunner.java:36:	public static AppiumDriver<MobileElement> driver;
+src/test/java/main/CucumberRunner.java:69:				DesiredCapabilities capabilities = new DesiredCapabilities();
+src/test/java/main/CucumberRunner.java:77:				driver = new IOSDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+src/test/java/main/CucumberRunner.java:83:				DesiredCapabilities capabilities = new DesiredCapabilities();
+src/test/java/main/CucumberRunner.java:88:				driver = new AndroidDriver<MobileElement>(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
+src/test/java/main/Core.java:33:import io.appium.java_client.AppiumDriver;
+src/test/java/main/Core.java:34:import io.appium.java_client.MobileElement;
+src/test/java/main/Core.java:35:import io.appium.java_client.android.AndroidDriver;
+src/test/java/main/Core.java:39:	public static AppiumDriver<MobileElement> driver;
+src/test/java/main/Core.java:383:			WebElement elementToClick = (WebElement) ((AndroidDriver) driver).findElementByAndroidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).resourceId(\"" + id + "\")).flingForward()");
+src/test/java/pageObjects/MusicPadObjects.java:50:	//Calling AppiumDriver.execute() with args: ["mobile: scroll",[{"toVisible":"false","element":"B3000000-0000-0000-7706-000000000000","direction":"down"}],"a7bd741a-2f72-4a51-92a6-911cf7d606be"]

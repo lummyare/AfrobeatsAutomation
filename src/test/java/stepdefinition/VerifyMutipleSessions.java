@@ -2,7 +2,7 @@ package stepdefinition;
 
 import static org.testng.Assert.assertTrue;
 
-import cucumber.api.java.en.Then;
+import io.cucumber.java.en.Then;
 import main.CucumberRunner;
 import pages.MultipleSessionsList;
 

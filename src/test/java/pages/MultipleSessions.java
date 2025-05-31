@@ -7,7 +7,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import pageObjects.MainScreenPageObject;
 import pageObjects.MusicPadObjects;
@@ -22,7 +22,7 @@ public class MultipleSessions extends MusicPad
 	MusicPadObjects musicPadObjects = new MusicPadObjects();
 	
 	EditMusicPad editMusicPad = new EditMusicPad(driver);
-	public MultipleSessions(AppiumDriver<MobileElement> driver)
+	public MultipleSessions(AppiumDriver driver)
 	{
 		
 		super(driver);
@@ -52,7 +52,7 @@ public class MultipleSessions extends MusicPad
 				findWebElementByIDAndClick(sessionObjects.burgerMenu);
 				findWebElementByIDAndClick(sessionObjects.addButtonSessions);
 				String newSessionName = "New Session " + i;
-				if(driver.getPlatformName().equalsIgnoreCase("iOS")) {
+				if(main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
 					sessionObjects.sessionNameTextBox.click();
 					int num=sessionObjects.sessionNameTextBox.getText().length();
 					for (int j = 0; j < num; j++) 
@@ -64,7 +64,7 @@ public class MultipleSessions extends MusicPad
 				sessionObjects.sessionNameTextBox.clear();
 				sessionObjects.sessionNameTextBox.sendKeys(newSessionName);
 				sessionList.add(newSessionName);
-				if(driver.getPlatformName().equalsIgnoreCase("iOS"))
+				if(main.Core.getPlatformName().equalsIgnoreCase("iOS"))
 					findWebElementByIDAndClick(sessionObjects.openButtonSessions);
 				findWebElementByIDAndClick(sessionObjects.openButtonSessions);
 				wait(3);

@@ -4,9 +4,9 @@ import static org.testng.Assert.assertTrue;
 
 import org.testng.log4testng.Logger;
 
-import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import main.CucumberRunner;
 import pages.EditMusicPad;
 

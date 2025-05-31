@@ -7,7 +7,7 @@ import java.util.List;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import pageObjects.MainScreenPageObject;
 import pageObjects.MusicPadObjects;
@@ -22,7 +22,7 @@ public class MultipleSessionsList extends MusicPad
 	MusicPadObjects musicPadObjects = new MusicPadObjects();
 	MultipleSessions multipleSessions=new MultipleSessions(driver);
 
-	public MultipleSessionsList(AppiumDriver<MobileElement> driver)
+	public MultipleSessionsList(AppiumDriver driver)
 	{
 		super(driver);
 		PageFactory.initElements(new AppiumFieldDecorator(driver),

@@ -14,7 +14,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import main.Core;
 import pageObjects.CartObjects;
@@ -27,7 +27,7 @@ public class Cart extends Core {
 
 	CartObjects cartObjects = new CartObjects();
 
-	public Cart(AppiumDriver<MobileElement> driver) {
+	public Cart(AppiumDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), cartObjects);
 	}
@@ -111,7 +111,7 @@ public class Cart extends Core {
 			// int cartItemCount = getNumberofCartItem();
 			findWebElementByIDAndClick(cartObjects.restorePurchaseButton);
 			wait(6);
-			if (driver.getPlatformName().equalsIgnoreCase("iOS")) {
+			if (main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
 
 				if (checkAlertPresent())
 					driver.switchTo().alert();
@@ -163,7 +163,7 @@ public class Cart extends Core {
 
 	public boolean verifyListItemCount() {
 		try {
-			if (driver.getPlatformName().equalsIgnoreCase("iOS")) {
+			if (main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
 				if (cartObjects.itemList.size() == 40) {
 					return true;
 
@@ -181,7 +181,7 @@ public class Cart extends Core {
 
 	public boolean verifyPullandRefreshCart() {
 		try {
-			if (driver.getPlatformName().equalsIgnoreCase("iOS")) {
+			if (main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
 				JavascriptExecutor js = (JavascriptExecutor) driver;
 				Map<String, Object> params = new HashMap<String, Object>();
 				params.put("element", ((RemoteWebElement) cartObjects.tableList).getId());

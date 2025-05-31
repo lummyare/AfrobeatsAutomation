@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import main.Core;
 import pageObjects.MainScreenPageObject;
@@ -16,7 +16,7 @@ public class Slider extends Core
 	SliderObjects sliderObjects = new SliderObjects();
 	MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
 
-	public Slider(AppiumDriver<MobileElement> driver)
+	public Slider(AppiumDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver),
@@ -40,7 +40,7 @@ public class Slider extends Core
 		{
 			boolean slider = checkElementDisplayed(sliderObjects.bpmSliderMenuValue);
 			System.out.println(slider);
-			if(driver.getPlatformName().equalsIgnoreCase("iOS"))
+			if(main.Core.getPlatformName().equalsIgnoreCase("iOS"))
 				findWebElementByIDAndClick(sliderObjects.bpmValue);
 			else
 				driver.navigate().back();
@@ -66,7 +66,7 @@ public class Slider extends Core
 
 				if (test[0].equals(Integer.toString(number)))
 				{
-					if(driver.getPlatformName().equalsIgnoreCase("iOS"))
+					if(main.Core.getPlatformName().equalsIgnoreCase("iOS"))
 						findWebElementByIDAndClick(sliderObjects.bpmValue);
 					else
 						driver.navigate().back();

@@ -7,7 +7,7 @@ import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import main.Core;
 import pageObjects.TapTempoObjects;
@@ -19,7 +19,7 @@ public class TapTempoButton extends Core
 	
 	TapTempoObjects TapTempoObject = new TapTempoObjects();
 
-	public TapTempoButton(AppiumDriver<MobileElement> driver)
+	public TapTempoButton(AppiumDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver),
@@ -46,7 +46,7 @@ public class TapTempoButton extends Core
 		try
 		{
 			btnStatusBefore = TapTempoObject.bpmValue.getText();
-			if (driver.getPlatformName().equalsIgnoreCase("Android")) {
+			if (main.Core.getPlatformName().equalsIgnoreCase("Android")) {
 				for (int i = 0; i < 4; i++) {
 					findWebElementByIDAndClick(TapTempoObject.tapTempoButton);
 				} 

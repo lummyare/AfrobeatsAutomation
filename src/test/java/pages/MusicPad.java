@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.asserts.SoftAssert;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import main.Core;
 import pageObjects.MusicPadObjects;
@@ -25,7 +25,7 @@ public class MusicPad extends Core {
 	HashSet<String> musicTracklist2 = new HashSet<String>();
 	List<String> valuelistHashset = new ArrayList<String>();
 
-	public MusicPad(AppiumDriver<MobileElement> driver) {
+	public MusicPad(AppiumDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), musicPadObjects);
 	}
@@ -75,7 +75,7 @@ public class MusicPad extends Core {
 	public void pauseMusic() {
 		wait(1);
 		/*
-		 * if(driver.getPlatformName().equalsIgnoreCase("iOS")) {
+		 * if(main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
 		 * findWebElementByIDAndClick(musicPadObjects.musicPadIcon.get(0)); } else
 		 */
 		findWebElementByIDAndClick(musicPadObjects.musicPadIcon.get(0));
@@ -85,7 +85,7 @@ public class MusicPad extends Core {
 	public void pauseMusicSecond() {
 		wait(1);
 		/*
-		 * if(driver.getPlatformName().equalsIgnoreCase("iOS")) {
+		 * if(main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
 		 * findWebElementByIDAndClick(musicPadObjects.musicPadIcon.get(0)); } else
 		 */
 		findWebElementByIDAndClick(musicPadObjects.musicPadIcon.get(1));
@@ -150,7 +150,7 @@ public class MusicPad extends Core {
 
 	public int getNumberofTotalPads() {
 		int size;
-		if (driver.getPlatformName().equalsIgnoreCase("Android")) {
+		if (main.Core.getPlatformName().equalsIgnoreCase("Android")) {
 			size = musicPadObjects.musicPadIcon.size();
 		} else
 			size = musicPadObjects.trackNamePad.size();
@@ -160,7 +160,7 @@ public class MusicPad extends Core {
 
 	public int getNumberofusedPads() {
 		int size;
-		if (driver.getPlatformName().equalsIgnoreCase("Android")) {
+		if (main.Core.getPlatformName().equalsIgnoreCase("Android")) {
 			size = musicPadObjects.trackNamePad.size();
 		} else
 			size = musicPadObjects.musicPadIcon.size();

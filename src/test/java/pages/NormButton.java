@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import main.Core;
 
@@ -16,13 +16,13 @@ public class NormButton extends Core {
 	String btnStatusBefore;
 	NormButtonObjects normButtonObjects = new NormButtonObjects();
 
-	public NormButton(AppiumDriver<MobileElement> driver) {
+	public NormButton(AppiumDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver), normButtonObjects);
 	}
 
 	public void clickOnVolNorm() {
-		if (driver.getPlatformName().equalsIgnoreCase("ios")) {
+		if (main.Core.getPlatformName().equalsIgnoreCase("ios")) {
 			findWebElementByIDAndClick(normButtonObjects.volNormButton);
 
 		} else {
@@ -35,7 +35,7 @@ public class NormButton extends Core {
 		boolean result = true;
 		try {
 
-			if (driver.getPlatformName().equalsIgnoreCase("ios")) {
+			if (main.Core.getPlatformName().equalsIgnoreCase("ios")) {
 
 				if (isAttribtuePresent(normButtonObjects.volNormButton, "value")) {
 					result = false;
@@ -66,7 +66,7 @@ public class NormButton extends Core {
 		boolean result = true;
 
 		try {
-			if (driver.getPlatformName().equalsIgnoreCase("ios")) {
+			if (main.Core.getPlatformName().equalsIgnoreCase("ios")) {
 				System.out.println(getAttribute(normButtonObjects.volNormButton, "value"));
 				if (getAttribute(normButtonObjects.volNormButton, "value").equals("1")) {
 					result = true;

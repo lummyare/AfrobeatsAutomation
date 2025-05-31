@@ -3,7 +3,7 @@ package pages;
 import org.openqa.selenium.support.PageFactory;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import org.openqa.selenium.WebElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import main.Core;
 import pageObjects.ConfirmationPopUpPageObject;
@@ -13,7 +13,7 @@ public class ConfirmationPopUpPage extends Core
 
 	ConfirmationPopUpPageObject confirmationPopUpPageObject = new ConfirmationPopUpPageObject();
 
-	public ConfirmationPopUpPage(AppiumDriver<MobileElement> driver)
+	public ConfirmationPopUpPage(AppiumDriver driver)
 	{
 		this.driver = driver;
 		PageFactory.initElements(new AppiumFieldDecorator(driver),

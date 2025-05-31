@@ -4,4 +4,4 @@ Feature: Add Multiple Sessions
 
     Given I launch the App
 	Then Tap on Multiple session button on the top right
-	And Tap the plus icon create a new Sessions, edit page & repeat scenario 1 times
+	And Tap the plus icon create a new Sessions, edit page & repeat scenario 5 times
