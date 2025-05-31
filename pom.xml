@@ -19,6 +19,13 @@
                         <version>4.15.0</version>
                 </dependency>
                 
+                <!-- Selenium HTTP JDK Client - Required for jdk-http-client factory -->
+                <dependency>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-http-jdk-client</artifactId>
+                        <version>4.13.0</version>
+                </dependency>
+                
                 <!-- Appium Java Client - Updated to 8.x for Appium 2.x -->
                 <dependency>
                         <groupId>io.appium</groupId>
@@ -66,6 +73,25 @@
                         <groupId>ch.qos.logback</groupId>
                         <artifactId>logback-classic</artifactId>
                         <version>1.4.11</version>
+                </dependency>
+                
+                <!-- Log4j dependencies for compatibility -->
+                <dependency>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-api</artifactId>
+                        <version>2.20.0</version>
+                </dependency>
+                
+                <dependency>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-core</artifactId>
+                        <version>2.20.0</version>
+                </dependency>
+                
+                <dependency>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-slf4j-impl</artifactId>
+                        <version>2.20.0</version>
                 </dependency>
                 
                 <!-- Apache POI -->
@@ -124,11 +150,15 @@
 </plugin>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.18.1</version>
+        <version>3.0.0-M9</version>
         <configuration>
           <suiteXmlFiles>
             <suiteXmlFile>testng.xml</suiteXmlFile>
           </suiteXmlFiles>
+          <systemPropertyVariables>
+            <webdriver.http.factory>jdk-http-client</webdriver.http.factory>
+          </systemPropertyVariables>
+          <argLine>-Dwebdriver.http.factory=jdk-http-client</argLine>
         </configuration>
       </plugin>
       <plugin>

@@ -43,6 +43,19 @@ public class Core
 
         private static Logger Log = LoggerFactory.getLogger(Core.class);
         
+        // Method to get driver instance with null check
+        public static AppiumDriver getDriver() {
+            if (driver == null) {
+                throw new IllegalStateException("Driver is not initialized. Please ensure the test setup is completed before accessing driver.");
+            }
+            return driver;
+        }
+        
+        // Method to set driver instance
+        public static void setDriver(AppiumDriver driverInstance) {
+            driver = driverInstance;
+        }
+        
         // Helper method to get platform name
         public static String getPlatformName() {
             return currentPlatform;
@@ -72,18 +85,22 @@ public class Core
         // FUNCTIONS*********************************
 
         /*
-         * Description: FInd & Click element by Xpath Created date: 1stDec2014
+         * Description: Find & Click element by Xpath Created date: 1stDec2014
          * Updated date: 1stDec2014
+         * Updated for Appium 2.x: Improved element handling to prevent garbage collection issues
          */
         public WebElement findWebElementByXpathAndClick(String xPathValue)
         {
                 Log.info("Finding the Element with Xpath - " + xPathValue);
-                Log.info(driver.findElement(By.xpath(xPathValue)).isDisplayed() + ""
-                + driver.findElement(By.xpath(xPathValue)).isEnabled());
-                Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(
-                Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(2));
-                WebElement element = (WebElement) wait.until(ExpectedConditions
-                .elementToBeClickable(By.xpath(xPathValue)));
+                
+                // Use explicit wait to ensure element is ready and avoid stale references
+                WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+                WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPathValue)));
+                
+                // Log element state for debugging
+                Log.info("Element displayed: " + element.isDisplayed() + ", enabled: " + element.isEnabled());
+                
+                // Click the element immediately after finding it to avoid stale reference
                 element.click();
                 return element;
         }
@@ -105,25 +122,29 @@ public class Core
         /*
          * Description: Find element by Xpath Created date: 1stDec2014 Updated date:
          * 1stDec2014
+         * Updated for Appium 2.x: Improved element handling to prevent garbage collection issues
          */
         public WebElement findWebElementByXpath(String xPathValue)
         {
                 Log.info("Finding the Element with Xpath - " + xPathValue);
-                Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(
-                Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(2));
-                WebElement element = (WebElement) wait.until(ExpectedConditions
-                .visibilityOfElementLocated(By.xpath(xPathValue)));
+                
+                // Use WebDriverWait for better stability in Appium 2.x
+                WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+                WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xPathValue)));
+                
+                Log.info("Element found and visible: " + element.isDisplayed());
                 return element;
         }
 
         public WebElement findWebElementByID(String ID)
         {
-                Log.info("Finding the Element with Xpath - " + ID);
-                Wait<WebDriver> wait = new FluentWait<WebDriver>(driver).withTimeout(
-                Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(2));
-                WebElement element = (WebElement) wait.until(ExpectedConditions
-                .visibilityOfElementLocated(By.id(ID)));
-        
+                Log.info("Finding the Element with ID - " + ID);
+                
+                // Use WebDriverWait for better stability in Appium 2.x
+                WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(30));
+                WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(ID)));
+                
+                Log.info("Element found by ID and visible: " + element.isDisplayed());
                 return element;
         }
 
@@ -132,7 +153,7 @@ public class Core
          */
         public void waitClickAble(String xPathValue)
         {
-                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+                WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(60));
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xPathValue)));
         }
 
@@ -169,7 +190,7 @@ public class Core
                 try
                 {
                         Log.info("Finding the Element with xpath - " + MsgElem);
-                        WebElement LoginString = driver.findElement(By.xpath(MsgElem));
+                        WebElement LoginString = getDriver().findElement(By.xpath(MsgElem));
                         boolean strtxt = LoginString.getText() == Msg;
                         System.out.println(strtxt);
                         Log.info(Msg);
@@ -186,7 +207,7 @@ public class Core
         // Description: To take screenshot
         public void takeScreenShot(String fileName)
         {
-                File scrFile = ((TakesScreenshot) driver)
+                File scrFile = ((TakesScreenshot) getDriver())
                 .getScreenshotAs(OutputType.FILE);
                 try
                 {
@@ -261,7 +282,7 @@ public class Core
         {
                 try
                 {
-                        Alert alert = driver.switchTo().alert();
+                        Alert alert = getDriver().switchTo().alert();
                         // alert is present
                         Log.info(alert.getText());
                         alert.accept();
@@ -368,7 +389,7 @@ public class Core
         public boolean checkAlertPresent() {
                 try 
             { 
-                driver.switchTo().alert(); 
+                getDriver().switchTo().alert(); 
                 return true;
             }   
             catch (NoAlertPresentException Ex) 
@@ -393,7 +414,7 @@ public class Core
         {
                 try
                 {
-                        WebElement elementToClick = driver.findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).resourceId(\"" + id + "\")).flingForward()"));
+                        WebElement elementToClick = getDriver().findElement(AppiumBy.androidUIAutomator("new UiScrollable(new UiSelector().scrollable(true).resourceId(\"" + id + "\")).flingForward()"));
                 }
                 catch (Exception e)
                 {
@@ -403,7 +424,7 @@ public class Core
 
         public void scrollNew(String id)
         {
-                JavascriptExecutor js = (JavascriptExecutor) driver;
+                JavascriptExecutor js = (JavascriptExecutor) getDriver();
                 HashMap<String, String> scrollObject = new HashMap<String, String>();
                 scrollObject.put("direction", "down");
                 js.executeScript("mobile: scroll", scrollObject);

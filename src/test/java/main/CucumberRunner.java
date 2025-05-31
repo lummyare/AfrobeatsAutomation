@@ -41,6 +41,9 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
         public void openBroswer(String browser) throws IOException, InterruptedException {
 
                 try {
+                        // Set system property to fix HttpClient factory error
+                        System.setProperty("webdriver.http.factory", "jdk-http-client");
+                        
                         Properties prop = new Properties();
                         String propFileName = "config.properties";
 
@@ -72,13 +75,26 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                                 options.setApp(iOSAppPath);
                                 options.setUdid(udidIOS);
                                 options.setAutomationName("XCUITest");
+                                
+                                // Appium 2.x specific capabilities
+                                options.setNewCommandTimeout(Duration.ofSeconds(300));
+                                options.setNoReset(false);
+                                options.setFullReset(false);
                         
                                 driver = new IOSDriver(new URL("http://0.0.0.0:4723/"), options);
                                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-                                driver.switchTo().alert().accept();
+                                
+                                try {
+                                        driver.switchTo().alert().accept();
+                                } catch (Exception alertException) {
+                                        // Alert may not be present, continue
+                                        System.out.println("No alert present or alert handling failed: " + alertException.getMessage());
+                                }
                                 
                                 // Set platform for Core utility
                                 main.Core.setPlatformName("iOS");
+                                // Set driver reference in Core
+                                main.Core.setDriver(driver);
                         
 
                         } else {
@@ -87,11 +103,22 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                                 options.setPlatformVersion(androidPlatformVersion);
                                 options.setPlatformName("Android");
                                 options.setApp(androidAppPath);
+                                
+                                // Appium 2.x specific capabilities for Android
+                                options.setAutomationName("UiAutomator2");
+                                options.setNewCommandTimeout(Duration.ofSeconds(300));
+                                options.setNoReset(false);
+                                options.setFullReset(false);
+                                options.setAutoGrantPermissions(true);
+                                options.setIgnoreHiddenApiPolicyError(true);
+                                
                                 driver = new AndroidDriver(new URL("http://0.0.0.0:4723/"), options);
                                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(80));
 
                                 // Set platform for Core utility
                                 main.Core.setPlatformName("Android");
+                                // Set driver reference in Core
+                                main.Core.setDriver(driver);
                                 
                                 if (browser.equalsIgnoreCase("Android") || !browser.equalsIgnoreCase("iOS")) {
                                         confirmationPopUpPage = new ConfirmationPopUpPage(driver);
@@ -102,8 +129,11 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                         }
                 } catch (Exception e) {
                         System.out.println("Exception: " + e);
+                        e.printStackTrace();
                 } finally {
-                        inputStream.close();
+                        if (inputStream != null) {
+                                inputStream.close();
+                        }
                 }
                 
                 
