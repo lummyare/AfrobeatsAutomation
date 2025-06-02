@@ -42,3 +42,29 @@ WARN Appium   - Driver "xcuitest" (package `appium-xcuitest-driver`) may be inco
 [38;5;48m[ADB][0m Using 'aapt2' from '/usr/lib/android-sdk/build-tools/debian/aapt2'
 [38;5;32m[AndroidUiautomator2Driver@3b0e][0m Restoring hidden api policy to the device default configuration
 [38;5;0m[HTTP][0m <-- POST /wd/hub/session 500 86967 ms - 624 
+[38;5;0m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk","appium:appActivity":"com.suenare.iafrobeats.afrobeats.SplashActivity","appium:appPackage":"com.suenare.iafrobeats.afrobeats","appium:appWaitActivity":"*","appium:appWaitDuration":60000,"appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","appium:fullReset":false,"appium:newCommandTimeout":600,"appium:noReset":true,"appium:platformVersion":"14.0","appium:skipDeviceInitialization":true,"appium:skipServerInstallation":true,"appium:uiautomator2ServerInstallTimeout":60000,"platformName":"ANDROID"}}}
+[Appium] Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'ANDROID'
+[Appium] The 'uiautomator2' driver was installed and matched caps.
+[Appium] Will require it at /home/ubuntu/.appium/node_modules/appium-uiautomator2-driver
+[38;5;16m[AppiumDriver@3c50][0m Appium v2.0.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+[38;5;16m[AppiumDriver@3c50][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+[38;5;16m[AppiumDriver@3c50][0m Appium's BaseDriver version is 9.18.0
+[38;5;16m[AppiumDriver@3c50][0m AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+[38;5;32m[AndroidUiautomator2Driver@130a][0m Session created with session id: 5e242582-6427-4a2d-b128-50baa021faa6
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;32m[AndroidUiautomator2Driver@130a][0m Retrieving device list
+[38;5;32m[AndroidUiautomator2Driver@130a][0m Looking for a device with Android '14.0.0'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@130a][0m Using device: emulator-5554
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;64m[BaseDriver][0m Using local app '/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@130a][0m Relaxing hidden api policy
+[38;5;32m[AndroidUiautomator2Driver@130a][0m 'skipDeviceInitialization' is set. Skipping device initialization.
+[38;5;32m[AndroidUiautomator2Driver@130a][0m 'skipServerInstallation' is set. Skipping UIAutomator2 server installation.
+[38;5;48m[ADB][0m Using 'apksigner.jar' from '/usr/lib/android-sdk/build-tools/debian/apksigner.jar'
+[38;5;48m[ADB][0m '/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk' is signed with the default certificate
+[38;5;48m[ADB][0m The application at '/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk' will not be cached, because the device under test has confirmed the support of streamed installs
+[38;5;32m[AndroidUiautomator2Driver@130a][0m Did not get the confirmation of UiAutomator2 server session deletion. Original error: An unknown server-side error occurred while processing the command. Original error: Session ID is not set, but saw a URL that requires it (/)
+[38;5;32m[AndroidUiautomator2Driver@130a][0m Restoring hidden api policy to the device default configuration
+[38;5;0m[HTTP][0m <-- POST /wd/hub/session 500 142956 ms - 1186 
