@@ -1,0 +1,44 @@
+
+{
+  "name": "appium-automation-cross-platform",
+  "version": "1.0.0",
+  "description": "Unified cross-platform Appium automation scripts for Mac and Windows",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "node install_all.js",
+    "install:all:dry-run": "node install_all.js --dry-run",
+    "appium:start": "node appium_ctl.js start",
+    "appium:stop": "node appium_ctl.js stop",
+    "appium:restart": "node appium_ctl.js restart",
+    "appium:status": "node appium_ctl.js status",
+    "appium:logs": "node appium_ctl.js logs",
+    "test:smoke": "node run_tests.js --smoke",
+    "test:regression": "node run_tests.js --regression",
+    "test:android": "node run_tests.js --device android",
+    "test:ios": "node run_tests.js --device ios",
+    "test:parallel": "node run_tests.js --parallel",
+    "test:dry-run": "node run_tests.js --dry-run"
+  },
+  "keywords": [
+    "appium",
+    "automation",
+    "cross-platform",
+    "mobile",
+    "testing",
+    "mac",
+    "windows"
+  ],
+  "author": "Appium Automation Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-repo/appium-automation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-repo/appium-automation/issues"
+  },
+  "homepage": "https://github.com/your-repo/appium-automation#readme"
+}
