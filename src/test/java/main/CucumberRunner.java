@@ -76,7 +76,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                                 options.setUdid(udidIOS);
                                 options.setAutomationName("XCUITest");
                         
-                                driver = new IOSDriver(new URL("http://0.0.0.0:4723/wd/hub"), options);
+                                driver = new IOSDriver(new URL("http://0.0.0.0:4723"), options);
                                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                                 driver.switchTo().alert().accept();
                                 
@@ -101,7 +101,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                                 options.setUiautomator2ServerInstallTimeout(Duration.ofSeconds(180));
                                 options.setUiautomator2ServerLaunchTimeout(Duration.ofSeconds(180));
                                 options.setUiautomator2ServerReadTimeout(Duration.ofSeconds(120));
-                                driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), options);
+                                driver = new AndroidDriver(new URL("http://0.0.0.0:4723"), options);
                                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
                                 // Set platform for Core utility

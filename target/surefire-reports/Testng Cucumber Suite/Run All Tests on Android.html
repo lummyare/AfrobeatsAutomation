@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/10/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Jun 02 05:41:52 UTC 2025</td>
+<td>Started on:</td><td>Mon Jun 02 13:01:40 UTC 2025</td>
 </tr>
-<tr><td>Total time:</td><td>90 seconds (90785 ms)</td>
+<tr><td>Total time:</td><td>32 seconds (32598 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,128 +76,152 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "When the music is played/paused for multiple pads, play/pause buttons should be displayed accordingnly", "Play & Pause Music for multiple pads"</td>
-<td><div><pre>java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
+<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Multiple sessions should be added to music pad", "Add Multiple Sessions"</td>
+<td><div><pre>java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$qStQcVtQ.get(Unknown Source)
-	at pages.MusicPad.playMusic(MusicPad.java:72)
-	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
-	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace448843184", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace448843184'><pre>java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Y7As7cFe.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
+	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
+	at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/multipleSessions.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace413788379", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace413788379'><pre>java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$qStQcVtQ.get(Unknown Source)
-	at pages.MusicPad.playMusic(MusicPad.java:72)
-	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
-	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Y7As7cFe.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
+	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
+	at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/multipleSessions.feature:6)
 </pre></div></td>
 <td>0</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>main.CucumberRunner@4009e306</td></tr>
 <tr>
-<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart Items should be successfully purchase from Store Screen.", "purchase Store Items"</td>
-<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
-	at stepdefinition.StorePurchase.verifyCartCount(StorePurchase.java:22)
-	at ✽.The assert the store button is showing store count 40(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/8_purchaseStoreItems.feature:6)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace6565574", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace6565574'><pre>java.lang.AssertionError: expected [true] but found [false]
-	at org.testng.Assert.fail(Assert.java:111)
-	at org.testng.Assert.failNotEquals(Assert.java:1578)
-	at org.testng.Assert.assertTrue(Assert.java:57)
-	at org.testng.Assert.assertTrue(Assert.java:67)
-	at stepdefinition.StorePurchase.verifyCartCount(StorePurchase.java:22)
-	at ✽.The assert the store button is showing store count 40(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/8_purchaseStoreItems.feature:6)
+<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "On moving slider, values should be changed", "Move slider"</td>
+<td><div><pre>java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hgecKOKE.getText(Unknown Source)
+	at main.Core.getText(Core.java:110)
+	at pages.Slider.openSlider(Slider.java:30)
+	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
+	at ✽.I tap on the number beside the green light on the top left(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/5_slider.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace889546737", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace889546737'><pre>java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hgecKOKE.getText(Unknown Source)
+	at main.Core.getText(Core.java:110)
+	at pages.Slider.openSlider(Slider.java:30)
+	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
+	at ✽.I tap on the number beside the green light on the top left(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/5_slider.feature:6)
 </pre></div></td>
-<td>5</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>0</td>
+<td>main.CucumberRunner@4009e306</td></tr>
+<tr>
+<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Free samples should be added to music pad", "Add Free Samples"</td>
+<td><div><pre>java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wzk1W8r5.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
+	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
+	at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/7_addFreeSamples.feature:5)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1078839705", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1078839705'><pre>java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wzk1W8r5.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
+	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
+	at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/7_addFreeSamples.feature:5)
+</pre></div></td>
+<td>0</td>
+<td>main.CucumberRunner@4009e306</td></tr>
 <tr>
 <td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "All created sessiond should be listed in Session screen and Play and Pause for each loaded pads on each sessions pages", "Verify all added Sessions"</td>
 <td><div><pre>java.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$s4Mri24x.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$i9AgzrjZ.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
 	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
 	at ✽.go to Multiple session page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/playAllPads.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace441309247", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace441309247'><pre>java.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
+</pre></div><a href='#' onClick='toggleBox("stack-trace544949263", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace544949263'><pre>java.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$s4Mri24x.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$i9AgzrjZ.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
 	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
 	at ✽.go to Multiple session page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/playAllPads.feature:6)
 </pre></div></td>
 <td>1</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>main.CucumberRunner@4009e306</td></tr>
 <tr>
-<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "When the application is launched, title should be "African Kit"", "Title verification"</td>
-<td><div><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
-	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1250956357", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1250956357'><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
-	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
-</pre></div></td>
-<td>0</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
-<tr>
-<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Multiple sessions should be added to music pad", "Add Multiple Sessions"</td>
-<td><div><pre>java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "VOL NORM should be enabled/disabled", "Vol Norm"</td>
+<td><div><pre>java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$jYPlOFIv.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PQujUH6E.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
-	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
-	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
-	at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/multipleSessions.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace83978548", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace83978548'><pre>java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
+	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
+	at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/6_volumeNorm.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace2072709038", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2072709038'><pre>java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$jYPlOFIv.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PQujUH6E.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
-	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
-	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
-	at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/multipleSessions.feature:6)
+	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
+	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
+	at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/6_volumeNorm.feature:6)
 </pre></div></td>
 <td>0</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>main.CucumberRunner@4009e306</td></tr>
 <tr>
 <td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "TAP TEMPO Button should be deactivated after tapping on that mutiple times", "tap on TAP TEMPO Button Multiple times"</td>
 <td><div><pre>java.lang.AssertionError: expected [true] but found [false]
 	at stepdefinition.TapTempo.verifyButtonDeactivated(TapTempo.java:35)
 	at ✽.Tap tempo button should be deactivated(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/9_tapTempoButton.feature:8)
-... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace634988942", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace634988942'><pre>java.lang.AssertionError: expected [true] but found [false]
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1533234724", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1533234724'><pre>java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
@@ -206,117 +230,93 @@ function toggleAllBoxes() {
 	at ✽.Tap tempo button should be deactivated(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/9_tapTempoButton.feature:8)
 </pre></div></td>
 <td>2</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>main.CucumberRunner@4009e306</td></tr>
 <tr>
-<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "VOL NORM should be enabled/disabled", "Vol Norm"</td>
-<td><div><pre>java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$pXIIlx2K.click(Unknown Source)
-	at main.Core.findWebElementByIDAndClick(Core.java:93)
-	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
-	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
-	at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/6_volumeNorm.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace634435864", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace634435864'><pre>java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$pXIIlx2K.click(Unknown Source)
-	at main.Core.findWebElementByIDAndClick(Core.java:93)
-	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
-	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
-	at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/6_volumeNorm.feature:6)
+<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "When the application is launched, title should be "African Kit"", "Title verification"</td>
+<td><div><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
+	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1434651019", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1434651019'><pre>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
+	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
 </pre></div></td>
 <td>0</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
-<tr>
-<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Free samples should be added to music pad", "Add Free Samples"</td>
-<td><div><pre>java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5eq245LJ.click(Unknown Source)
-	at main.Core.findWebElementByIDAndClick(Core.java:93)
-	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
-	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
-	at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/7_addFreeSamples.feature:5)
-</pre></div><a href='#' onClick='toggleBox("stack-trace994228009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace994228009'><pre>java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
-	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5eq245LJ.click(Unknown Source)
-	at main.Core.findWebElementByIDAndClick(Core.java:93)
-	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
-	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
-	at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/7_addFreeSamples.feature:5)
-</pre></div></td>
-<td>0</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>main.CucumberRunner@4009e306</td></tr>
 <tr>
 <td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "When the music is played/paused, progress bar should be enabled/disabled", "Play & Pause Music"</td>
 <td><div><pre>java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$BD0nKqz2.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$fPlollhi.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
-</pre></div><a href='#' onClick='toggleBox("stack-trace563734597", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace563734597'><pre>java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+</pre></div><a href='#' onClick='toggleBox("stack-trace2032547119", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2032547119'><pre>java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$BD0nKqz2.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$fPlollhi.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
 </pre></div></td>
 <td>0</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>main.CucumberRunner@4009e306</td></tr>
 <tr>
-<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "On moving slider, values should be changed", "Move slider"</td>
-<td><div><pre>java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Cart Items should be successfully purchase from Store Screen.", "purchase Store Items"</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at stepdefinition.StorePurchase.verifyCartCount(StorePurchase.java:22)
+	at ✽.The assert the store button is showing store count 40(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/8_purchaseStoreItems.feature:6)
+... Removed 4 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1542567208", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1542567208'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepdefinition.StorePurchase.verifyCartCount(StorePurchase.java:22)
+	at ✽.The assert the store button is showing store count 40(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/8_purchaseStoreItems.feature:6)
+</pre></div></td>
+<td>5</td>
+<td>main.CucumberRunner@4009e306</td></tr>
+<tr>
+<td title='main.CucumberRunner.runScenario()'><b>runScenario</b><br>Test class: main.CucumberRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "When the music is played/paused for multiple pads, play/pause buttons should be displayed accordingnly", "Play & Pause Music for multiple pads"</td>
+<td><div><pre>java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5ume5lzr.getText(Unknown Source)
-	at main.Core.getText(Core.java:110)
-	at pages.Slider.openSlider(Slider.java:30)
-	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
-	at ✽.I tap on the number beside the green light on the top left(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/5_slider.feature:6)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1874741248", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1874741248'><pre>java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
-	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
-	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
-	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$zKvCCmat.get(Unknown Source)
+	at pages.MusicPad.playMusic(MusicPad.java:72)
+	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
+	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace752090153", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace752090153'><pre>java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5ume5lzr.getText(Unknown Source)
-	at main.Core.getText(Core.java:110)
-	at pages.Slider.openSlider(Slider.java:30)
-	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
-	at ✽.I tap on the number beside the green light on the top left(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/5_slider.feature:6)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$zKvCCmat.get(Unknown Source)
+	at pages.MusicPad.playMusic(MusicPad.java:72)
+	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
+	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
 </pre></div></td>
 <td>0</td>
-<td>main.CucumberRunner@1283bb96</td></tr>
+<td>main.CucumberRunner@4009e306</td></tr>
 </table><p>
 </body>
 </html>

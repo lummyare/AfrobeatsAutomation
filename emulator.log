@@ -1,0 +1,18 @@
+INFO         | Android emulator version 35.5.10.0 (build_id 13402964) (CL:N/A)
+INFO         | Graphics backend: gfxstream
+INFO         | Found systemPath /home/ubuntu/android-sdk/system-images/android-34/google_apis/x86_64/
+INFO         | Increasing RAM size to 2048MB
+INFO         | Checking system compatibility:
+INFO         |   Checking: hasSufficientDiskSpace
+INFO         |      Ok: Disk space requirements to run avd: `ci_avd` are met
+INFO         |   Checking: hasSufficientHwGpu
+INFO         |      Ok: Hardware GPU requirements to run avd: `ci_avd` are passed
+INFO         |   Checking: hasSufficientSystem
+INFO         |      Ok: System requirements to run avd: `ci_avd` are met
+WARNING      | File System is not ext4, disable QuickbootFileBacked feature
+ERROR        | x86_64 emulation currently requires hardware acceleration!
+CPU acceleration status: KVM requires a CPU that supports vmx or svm
+More info on configuring VM acceleration on Linux:
+https://developer.android.com/studio/run/emulator-acceleration#vm-linux
+General information on acceleration: https://developer.android.com/studio/run/emulator-acceleration.
+

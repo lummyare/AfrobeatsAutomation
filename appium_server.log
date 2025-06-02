@@ -1,0 +1,26 @@
+2025-06-02 12:54:46:654 [Appium] Welcome to Appium v2.19.0
+2025-06-02 12:54:46:656 [Appium] Non-default server args:
+2025-06-02 12:54:46:657 [Appium] { loglevel: 'info' }
+2025-06-02 12:54:46:657 [Appium] Attempting to load driver uiautomator2...
+2025-06-02 12:54:46:658 [Appium] Attempting to load driver xcuitest...
+2025-06-02 12:55:01:966 [Appium] Appium REST http interface listener started on http://0.0.0.0:4723
+2025-06-02 12:55:01:967 [Appium] You can provide the following URLs in your client code to connect to this server:
+	http://127.0.0.1:4723/ (only accessible from the same host)
+	http://100.124.24.81:4723/
+2025-06-02 12:55:01:967 [Appium] Available drivers:
+2025-06-02 12:55:01:967 [Appium]   - uiautomator2@4.2.3 (automationName 'UiAutomator2')
+2025-06-02 12:55:01:967 [Appium]   - xcuitest@9.3.1 (automationName 'XCUITest')
+2025-06-02 12:55:01:968 [Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+2025-06-02 12:57:49:876 [HTTP] --> POST /wd/hub/session {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk","appium:appActivity":"com.suenare.iafrobeats.afrobeats.SplashActivity","appium:appPackage":"com.suenare.iafrobeats.afrobeats","appium:appWaitActivity":"*","appium:appWaitDuration":30000,"appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","appium:fullReset":false,"appium:newCommandTimeout":300,"appium:noReset":false,"appium:platformVersion":"14.0","appium:uiautomator2ServerInstallTimeout":180000,"appium:uiautomator2ServerLaunchTimeout":180000,"appium:uiautomator2ServerReadTimeout":120000,"platformName":"ANDROID"}}}
+2025-06-02 12:57:49:885 [HTTP] <-- POST /wd/hub/session 404 7 ms - 211 
+2025-06-02 13:00:45:449 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk","appium:appActivity":"com.suenare.iafrobeats.afrobeats.SplashActivity","appium:appPackage":"com.suenare.iafrobeats.afrobeats","appium:appWaitActivity":"*","appium:appWaitDuration":30000,"appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","appium:fullReset":false,"appium:newCommandTimeout":300,"appium:noReset":false,"appium:platformVersion":"14.0","appium:uiautomator2ServerInstallTimeout":180000,"appium:uiautomator2ServerLaunchTimeout":180000,"appium:uiautomator2ServerReadTimeout":120000,"platformName":"ANDROID"}}}
+2025-06-02 13:00:45:454 [Appium] Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'ANDROID'
+2025-06-02 13:00:45:454 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2025-06-02 13:00:45:454 [Appium] Will require it at /home/ubuntu/.appium/node_modules/appium-uiautomator2-driver
+2025-06-02 13:00:45:460 [AppiumDriver@ea78] Appium v2.19.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+2025-06-02 13:00:45:460 [AppiumDriver@ea78] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2025-06-02 13:00:45:460 [AppiumDriver@ea78] Appium's BaseDriver version is 9.18.0
+2025-06-02 13:00:45:461 [AppiumDriver@ea78] AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+2025-06-02 13:00:45:470 [d20e1257][38;5;-87m[AndroidUiautomator2Driver@1393] Session created with session id: d20e1257-696a-44de-98eb-45d76dbedb1c
+2025-06-02 13:00:45:571 [d20e1257][HTTP] <-- POST /session 500 122 ms - 844 
+2025-06-02 13:01:05:358 [Appium] Received SIGTERM - shutting down

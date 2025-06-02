@@ -1,62 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="0.415" tests="10" errors="0" skipped="0" failures="10">
+<testsuite name="TestSuite" time="0.464" tests="10" errors="0" skipped="0" failures="10">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="17.0.15+6-Ubuntu-0ubuntu122.04"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="browser" value="Android"/>
+    <property name="java.vm.version" value="11.0.27+6-post-Ubuntu-0ubuntu122.04"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
     <property name="maven.multiModuleProjectDirectory" value="/home/ubuntu/AfrobeatsAutomation"/>
     <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="java.vendor.url" value="https://ubuntu.com/"/>
-    <property name="path.separator" value=":"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value="unknown"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/home/ubuntu/AfrobeatsAutomation"/>
     <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="17.0.15+6-Ubuntu-0ubuntu122.04"/>
+    <property name="java.runtime.version" value="11.0.27+6-post-Ubuntu-0ubuntu122.04"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.io.tmpdir" value="/tmp"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Linux"/>
+    <property name="suiteXmlFile" value="testng.xml"/>
     <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
     <property name="maven.conf" value="/usr/share/maven/conf"/>
     <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="61.0"/>
+    <property name="java.class.version" value="55.0"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="5.15.0-1062-aws"/>
     <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
     <property name="user.home" value="/home/ubuntu"/>
     <property name="user.timezone" value="Etc/UTC"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
     <property name="file.encoding" value="UTF-8"/>
-    <property name="java.specification.version" value="17"/>
+    <property name="java.specification.version" value="11"/>
     <property name="user.name" value="ubuntu"/>
     <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
-    <property name="java.vm.specification.version" value="17"/>
+    <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -Dbrowser=Android"/>
-    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk-amd64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -DsuiteXmlFile=testng.xml"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="17.0.15"/>
-    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.version" value="11.0.27"/>
     <property name="java.vendor" value="Ubuntu"/>
-    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="java.specification.maintenance.version" value="3"/>
     <property name="maven.home" value="/usr/share/maven"/>
     <property name="file.separator" value="/"/>
     <property name="java.version.date" value="2025-04-15"/>
-    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-17"/>
+    <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.415">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="0.464">
     <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
@@ -64,11 +68,11 @@
 	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
 	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
 </failure>
-    <system-out><![CDATA[05:41:52.700 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/home/ubuntu/AfrobeatsAutomation/testng.xml"
-Exception: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Appium Settings app is not running after 30000ms 
-Host info: host: 'chatllm-computer-15309a32a6-54bfdb6cc8-m6l2g', ip: '100.119.36.80'
+    <system-out><![CDATA[13:01:39.866 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/home/ubuntu/AfrobeatsAutomation/testng.xml"
+Exception: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms 
+Host info: host: 'chatllm-computer-15309a32a6-569698c75c-l7t6h', ip: '100.124.24.81'
 Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1062-aws', java.version: '17.0.15'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1062-aws', java.version: '11.0.27'
 Driver info: io.appium.java_client.android.AndroidDriver
 Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:appWaitDuration=30000, appium:appWaitActivity=*, appium:automationName=UiAutomator2, appium:fullReset=false, appium:platformVersion=14.0, appium:uiautomator2ServerReadTimeout=120000, appium:noReset=false, appium:uiautomator2ServerLaunchTimeout=180000, appium:appActivity=com.suenare.iafrobeats.afrobeats.SplashActivity, appium:deviceName=emulator-5554, platformName=ANDROID, appium:app=/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk, appium:appPackage=com.suenare.iafrobeats.afrobeats, appium:uiautomator2ServerInstallTimeout=180000}], desiredCapabilities=Capabilities {appium:app: /home/ubuntu/AfrobeatsAutom..., appium:appActivity: com.suenare.iafrobeats.afro..., appium:appPackage: com.suenare.iafrobeats.afro..., appium:appWaitActivity: *, appium:appWaitDuration: 30000, appium:automationName: UiAutomator2, appium:deviceName: emulator-5554, appium:fullReset: false, appium:newCommandTimeout: 300, appium:noReset: false, appium:platformVersion: 14.0, appium:uiautomator2ServerInstallTimeout: 180000, appium:uiautomator2ServerLaunchTimeout: 180000, appium:uiautomator2ServerReadTimeout: 120000, platformName: ANDROID}}]
 Capabilities {appium:app: /home/ubuntu/AfrobeatsAutom..., appium:appActivity: com.suenare.iafrobeats.afro..., appium:appPackage: com.suenare.iafrobeats.afro..., appium:appWaitActivity: *, appium:appWaitDuration: 30000, appium:automationName: UiAutomator2, appium:deviceName: emulator-5554, appium:fullReset: false, appium:newCommandTimeout: 300, appium:noReset: false, appium:platformVersion: 14.0, appium:uiautomator2ServerInstallTimeout: 180000, appium:uiautomator2ServerLaunchTimeout: 180000, appium:uiautomator2ServerReadTimeout: 120000, platformName: ANDROID}
@@ -76,7 +80,7 @@ Capabilities {appium:app: /home/ubuntu/AfrobeatsAutom..., appium:appActivity: co
 Scenario: When the application is launched, title should be "African Kit" &amp#27;[90m# src/test/resources/features/1_pageTitle.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                  &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-05:43:13.438 [main] INFO stepdefinition.PageTitle -- Into App is launched
+13:02:01.553 [main] INFO stepdefinition.PageTitle -- Into App is launched
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mApp is launched&amp#27;[0m                                                    &amp#27;[90m# stepdefinition.PageTitle.whenAppIsLaunched()&amp#27;[0m
 The element By.id: mainPageTitle is not locatable anymore because its context has been garbage collected
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mAssert the Page name is African Kit&amp#27;[0m                                &amp#27;[90m# stepdefinition.PageTitle.verifyPageName()&amp#27;[0m
@@ -89,14 +93,14 @@ The element By.id: mainPageTitle is not locatable anymore because its context ha
 &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.448">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="0.654">
     <failure message="Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$BD0nKqz2.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$fPlollhi.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
@@ -107,15 +111,15 @@ Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                           &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
 Elements By.id: trackNamePad are not locatable anymore because their context has been garbage collected
   &amp#27;[32mAnd &amp#27;[0m&amp#27;[32mI Tap to play and tap to stop playing each loaded pads&amp#27;[0m                       &amp#27;[90m# stepdefinition.MusicPlayPause.playandPauseAllTrack()&amp#27;[0m
-Error clicking music pad: Cannot invoke "io.appium.java_client.AppiumDriver.findElements(org.openqa.selenium.By)" because "pages.MusicPad.driver" is null
+Error clicking music pad: null
   &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI tap on music pad&amp#27;[0m                                                          &amp#27;[90m# stepdefinition.MusicPlayPause.iTapOnMusicPad()&amp#27;[0m
       &amp#27;[31mjava.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$BD0nKqz2.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$fPlollhi.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
@@ -125,14 +129,14 @@ Error clicking music pad: Cannot invoke "io.appium.java_client.AppiumDriver.find
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mMusic should be paused & progress bar should be removed&amp#27;[0m                     &amp#27;[90m# stepdefinition.MusicPlayPause.musicShouldBePuased()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.25">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="0.354">
     <failure message="Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$qStQcVtQ.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$zKvCCmat.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
@@ -141,15 +145,15 @@ Error clicking music pad: Cannot invoke "io.appium.java_client.AppiumDriver.find
 Scenario: When the music is played/paused for multiple pads, play/pause buttons should be displayed accordingnly &amp#27;[90m# src/test/resources/features/3_multipleMusicPlayPause.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                                                         &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-Error clicking music pad: Cannot invoke "io.appium.java_client.AppiumDriver.findElements(org.openqa.selenium.By)" because "pages.MusicPad.driver" is null
+Error clicking music pad: null
   &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI tap on music pad&amp#27;[0m                                                                                        &amp#27;[90m# stepdefinition.MusicPlayPause.iTapOnMusicPad()&amp#27;[0m
       &amp#27;[31mjava.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$qStQcVtQ.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$zKvCCmat.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
@@ -161,14 +165,14 @@ Error clicking music pad: Cannot invoke "io.appium.java_client.AppiumDriver.find
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mMusic should be paused & progress bar should be removed&amp#27;[0m                                                   &amp#27;[90m# stepdefinition.MusicPlayPause.musicShouldBePuased()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.127">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="0.191">
     <failure message="The element By.id: bpmValue is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5ume5lzr.getText(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hgecKOKE.getText(Unknown Source)
 	at main.Core.getText(Core.java:110)
 	at pages.Slider.openSlider(Slider.java:30)
 	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
@@ -181,11 +185,11 @@ Waiting for application to get launched
   &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI tap on the number beside the green light on the top left&amp#27;[0m                &amp#27;[90m# stepdefinition.SliderSteps.iTapOnNumberSlider()&amp#27;[0m
       &amp#27;[31mjava.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5ume5lzr.getText(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hgecKOKE.getText(Unknown Source)
 	at main.Core.getText(Core.java:110)
 	at pages.Slider.openSlider(Slider.java:30)
 	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
@@ -197,14 +201,14 @@ Waiting for application to get launched
   &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI tap on back button, slider pop up should close&amp#27;[0m                           &amp#27;[90m# stepdefinition.SliderSteps.goBack()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.054">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="0.082">
     <failure message="The element By.id: volNormButton is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$pXIIlx2K.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PQujUH6E.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
 	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
@@ -217,11 +221,11 @@ Waiting for application to get launched
   &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI tap the VOL NORM button&amp#27;[0m              &amp#27;[90m# stepdefinition.VolNorm.iTapOnVolNorm()&amp#27;[0m
       &amp#27;[31mjava.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$pXIIlx2K.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PQujUH6E.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
 	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
@@ -234,14 +238,14 @@ Waiting for application to get launched
     <system-err><![CDATA[The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.239">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="0.3">
     <failure message="The element By.id: editPads is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5eq245LJ.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wzk1W8r5.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
 	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
@@ -251,17 +255,17 @@ Waiting for application to get launched
 Scenario: Free samples should be added to music pad                                                                                                                                                                &amp#27;[90m# src/test/resources/features/7_addFreeSamples.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                                                                                                                                                           &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-05:43:14.567 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/txt_editPad
+13:02:03.145 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/txt_editPad
 Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/txt_editPad: Input must be set
 Error clicking edit pads: Input must be set
   &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI tap the Edit page&amp#27;[0m                                                                                                                                                                                         &amp#27;[90m# stepdefinition.AddFreeSamples.iTapOnEditPad()&amp#27;[0m
       &amp#27;[31mjava.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$5eq245LJ.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wzk1W8r5.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
 	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
@@ -275,7 +279,7 @@ Error clicking edit pads: Input must be set
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mtap to play and tap to stop each loaded pads Assert I can see all icons and each loaded pads are playing audio.&amp#27;[0m                                                                                             &amp#27;[90m# stepdefinition.AddFreeSamples.playAllLoadedMusic()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="5.209">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="5.264">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -307,7 +311,7 @@ The element By.id: btnCartCount is not locatable anymore because its context has
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mAssert all Folder names showing are all contents downloaded from Store page&amp#27;[0m &amp#27;[90m# stepdefinition.StorePurchase.verifyListOnEditPads()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="2.086">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="2.117">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
@@ -336,14 +340,14 @@ The element By.id: bpmValue is not locatable anymore because its context has bee
 &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.67">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="0.805">
     <failure message="The element By.id: settingButton is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$jYPlOFIv.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Y7As7cFe.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
 	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
@@ -353,17 +357,17 @@ The element By.id: bpmValue is not locatable anymore because its context has bee
 Scenario: Multiple sessions should be added to music pad                           &amp#27;[90m# src/test/resources/features/multipleSessions.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                           &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-05:43:22.534 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_setting
+13:02:11.337 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_setting
 Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/img_setting: Input must be set
 Error in multipleSessionSelected: Input must be set
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mTap on Multiple session button on the top right&amp#27;[0m                             &amp#27;[90m# stepdefinition.AddMultipleSessions.tapOnMultipleSessions()&amp#27;[0m
       &amp#27;[31mjava.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$jYPlOFIv.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Y7As7cFe.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
 	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
@@ -372,14 +376,14 @@ Error in multipleSessionSelected: Input must be set
   &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mTap the plus icon create a new Sessions, edit page & repeat scenario &amp#27;[0m&amp#27;[36m&amp#27;[1m5&amp#27;[0m&amp#27;[36m times&amp#27;[0m &amp#27;[90m# stepdefinition.AddMultipleSessions.addSession(int)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="1.058">
+  <testcase name="runScenario" classname="main.CucumberRunner" time="1.325">
     <failure message="The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$s4Mri24x.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$i9AgzrjZ.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
 	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
@@ -389,17 +393,17 @@ Error in multipleSessionSelected: Input must be set
 Scenario: All created sessiond should be listed in Session screen and Play and Pause for each loaded pads on each sessions pages &amp#27;[90m# src/test/resources/features/playAllPads.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                                                                         &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-05:43:23.593 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_menu
+13:02:12.662 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_menu
 Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/img_menu: Input must be set
 Error in multipleSessionsList: Input must be set
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mgo to Multiple session page&amp#27;[0m                                                                                               &amp#27;[90m# stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions()&amp#27;[0m
       &amp#27;[31mjava.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
-	at java.base/java.util.Optional.orElseThrow(Optional.java:403)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$s4Mri24x.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$i9AgzrjZ.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
 	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
