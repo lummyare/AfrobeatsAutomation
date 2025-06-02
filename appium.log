@@ -68,3 +68,239 @@ WARN Appium   - Driver "xcuitest" (package `appium-xcuitest-driver`) may be inco
 [38;5;32m[AndroidUiautomator2Driver@130a][0m Did not get the confirmation of UiAutomator2 server session deletion. Original error: An unknown server-side error occurred while processing the command. Original error: Session ID is not set, but saw a URL that requires it (/)
 [38;5;32m[AndroidUiautomator2Driver@130a][0m Restoring hidden api policy to the device default configuration
 [38;5;0m[HTTP][0m <-- POST /wd/hub/session 500 142956 ms - 1186 
+[38;5;0m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk","appium:appActivity":"com.suenare.iafrobeats.afrobeats.SplashActivity","appium:appPackage":"com.suenare.iafrobeats.afrobeats","appium:appWaitActivity":"*","appium:appWaitDuration":60000,"appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","appium:fullReset":false,"appium:newCommandTimeout":600,"appium:noReset":true,"appium:platformVersion":"14.0","appium:skipDeviceInitialization":true,"appium:skipServerInstallation":true,"appium:uiautomator2ServerInstallTimeout":120000,"appium:uiautomator2ServerLaunchTimeout":120000,"appium:uiautomator2ServerReadTimeout":60000,"platformName":"ANDROID"}}}
+[Appium] Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'ANDROID'
+[Appium] The 'uiautomator2' driver was installed and matched caps.
+[Appium] Will require it at /home/ubuntu/.appium/node_modules/appium-uiautomator2-driver
+[38;5;16m[AppiumDriver@3c50][0m Appium v2.0.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+[38;5;16m[AppiumDriver@3c50][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+[38;5;16m[AppiumDriver@3c50][0m Appium's BaseDriver version is 9.18.0
+[38;5;16m[AppiumDriver@3c50][0m AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Session created with session id: b325d37d-9683-43a7-aa54-f0e4b6cdf381
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Retrieving device list
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Looking for a device with Android '14.0.0'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Using device: emulator-5554
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;64m[BaseDriver][0m Using local app '/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Relaxing hidden api policy
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m 'skipDeviceInitialization' is set. Skipping device initialization.
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m 'skipServerInstallation' is set. Skipping UIAutomator2 server installation.
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m 'skipServerInstallation' is set. Attempting to use UIAutomator2 server from the device
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Waiting up to 120000ms for UiAutomator2 to be online...
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m The instrumentation process has been unexpectedly terminated. Retrying UiAutomator2 startup (#1 of 1)
+[38;5;48m[ADB][0m No 'uiautomator' process has been found
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Waiting up to 120000ms for UiAutomator2 to be online...
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Did not get the confirmation of UiAutomator2 server session deletion. Original error: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[38;5;32m[AndroidUiautomator2Driver@9d28][0m Restoring hidden api policy to the device default configuration
+[38;5;0m[HTTP][0m <-- POST /wd/hub/session 500 130957 ms - 802 
+[38;5;0m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk","appium:appActivity":"com.suenare.iafrobeats.afrobeats.SplashActivity","appium:appPackage":"com.suenare.iafrobeats.afrobeats","appium:appWaitActivity":"*","appium:appWaitDuration":60000,"appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","appium:fullReset":false,"appium:newCommandTimeout":600,"appium:noReset":true,"appium:platformVersion":"14.0","appium:skipDeviceInitialization":true,"appium:skipServerInstallation":true,"appium:uiautomator2ServerInstallTimeout":120000,"appium:uiautomator2ServerLaunchTimeout":120000,"appium:uiautomator2ServerReadTimeout":60000,"platformName":"ANDROID"}}}
+[Appium] Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'ANDROID'
+[Appium] The 'uiautomator2' driver was installed and matched caps.
+[Appium] Will require it at /home/ubuntu/.appium/node_modules/appium-uiautomator2-driver
+[38;5;16m[AppiumDriver@3c50][0m Appium v2.0.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+[38;5;16m[AppiumDriver@3c50][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+[38;5;16m[AppiumDriver@3c50][0m Appium's BaseDriver version is 9.18.0
+[38;5;16m[AppiumDriver@3c50][0m AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Session created with session id: 1b1c6072-8973-440f-aab4-8e9084cc8d65
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Retrieving device list
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Looking for a device with Android '14.0.0'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Using device: emulator-5554
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;64m[BaseDriver][0m Using local app '/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Relaxing hidden api policy
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m 'skipDeviceInitialization' is set. Skipping device initialization.
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m 'skipServerInstallation' is set. Skipping UIAutomator2 server installation.
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m 'skipServerInstallation' is set. Attempting to use UIAutomator2 server from the device
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Waiting up to 120000ms for UiAutomator2 to be online...
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m The instrumentation process has been unexpectedly terminated. Retrying UiAutomator2 startup (#1 of 1)
+[38;5;48m[ADB][0m No 'uiautomator' process has been found
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Waiting up to 120000ms for UiAutomator2 to be online...
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Did not get the confirmation of UiAutomator2 server session deletion. Original error: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[38;5;32m[AndroidUiautomator2Driver@1e1d][0m Restoring hidden api policy to the device default configuration
+[38;5;0m[HTTP][0m <-- POST /wd/hub/session 500 121769 ms - 802 
+[38;5;0m[HTTP][0m [37m-->[39m [37mPOST[39m [37m/wd/hub/session[39m {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk","appium:appActivity":"com.suenare.iafrobeats.afrobeats.SplashActivity","appium:appPackage":"com.suenare.iafrobeats.afrobeats","appium:appWaitActivity":"*","appium:appWaitDuration":60000,"appium:automationName":"UiAutomator2","appium:deviceName":"emulator-5554","appium:fullReset":false,"appium:newCommandTimeout":600,"appium:noReset":true,"appium:platformVersion":"14.0","appium:skipDeviceInitialization":true,"appium:skipServerInstallation":true,"appium:uiautomator2ServerInstallTimeout":120000,"appium:uiautomator2ServerLaunchTimeout":120000,"appium:uiautomator2ServerReadTimeout":60000,"platformName":"ANDROID"}}}
+[Appium] Attempting to find matching driver for automationName 'UiAutomator2' and platformName 'ANDROID'
+[Appium] The 'uiautomator2' driver was installed and matched caps.
+[Appium] Will require it at /home/ubuntu/.appium/node_modules/appium-uiautomator2-driver
+[38;5;16m[AppiumDriver@3c50][0m Appium v2.0.0 creating new AndroidUiautomator2Driver (v4.2.3) session
+[38;5;16m[AppiumDriver@3c50][0m Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+[38;5;16m[AppiumDriver@3c50][0m Appium's BaseDriver version is 9.18.0
+[38;5;16m[AppiumDriver@3c50][0m AndroidUiautomator2Driver's BaseDriver version is 9.18.0
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Session created with session id: 5f1280c6-22b4-465d-9566-23bb7fa05cd0
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Retrieving device list
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Looking for a device with Android '14.0.0'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Using device: emulator-5554
+[38;5;48m[ADB][0m Using 'adb' from '/usr/lib/android-sdk/platform-tools/adb'
+[38;5;64m[BaseDriver][0m Using local app '/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk'
+[38;5;48m[ADB][0m Getting device platform version
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Relaxing hidden api policy
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m 'skipDeviceInitialization' is set. Skipping device initialization.
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m 'skipServerInstallation' is set. Skipping UIAutomator2 server installation.
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m 'skipServerInstallation' is set. Attempting to use UIAutomator2 server from the device
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Waiting up to 120000ms for UiAutomator2 to be online...
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m The instrumentation process has been unexpectedly terminated. Retrying UiAutomator2 startup (#1 of 1)
+[38;5;48m[ADB][0m No 'uiautomator' process has been found
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Waiting up to 120000ms for UiAutomator2 to be online...
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m socket hang up
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m The instrumentation process cannot be initialized. Make sure the application under test does not crash and investigate the logcat output.
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Did not get the confirmation of UiAutomator2 server session deletion. Original error: An unknown server-side error occurred while processing the command. Original error: 'DELETE /' cannot be proxied to UiAutomator2 server because the instrumentation process is not running (probably crashed). Check the server log and/or the logcat output for more details
+[38;5;32m[AndroidUiautomator2Driver@d33c][0m Restoring hidden api policy to the device default configuration
+[38;5;0m[HTTP][0m <-- POST /wd/hub/session 500 111514 ms - 802 
+[Appium] Received SIGTERM - shutting down
+[38;5;0m[HTTP][0m Closing Appium HTTP server
+[38;5;0m[HTTP][0m Appium HTTP server has been successfully closed after 0ms

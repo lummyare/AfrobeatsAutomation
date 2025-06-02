@@ -53,7 +53,13 @@ public class EditMusicPad extends Core {
         }
 
         public void clickEditPads() {
-                findWebElementByIDAndClick(musicPadObjects.editPads);
+                try {
+                        findAndClickElementById("com.suenare.iafrobeats.afrobeats:id/txt_editPad");
+                } catch (Exception e) {
+                        System.out.println("Error clicking edit pads: " + e.getMessage());
+                        // Fallback to original method
+                        findWebElementByIDAndClick(musicPadObjects.editPads);
+                }
         }
 
         public boolean checkFolderVisibility() {

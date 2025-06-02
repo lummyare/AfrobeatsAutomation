@@ -90,9 +90,18 @@ public class Core
 
         public void findWebElementByIDAndClick(WebElement element)
         {
-                
                 element.click();
+        }
 
+        // New method to find and click element by ID string to avoid stale element issues
+        public void findAndClickElementById(String elementId) {
+                try {
+                        WebElement element = findWebElementByID(elementId);
+                        element.click();
+                } catch (Exception e) {
+                        System.out.println("Error finding and clicking element with ID " + elementId + ": " + e.getMessage());
+                        throw e;
+                }
         }
 
         public String getText(WebElement element)

@@ -93,14 +93,14 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                                 options.setAutomationName("UiAutomator2");
                                 options.setAppPackage("com.suenare.iafrobeats.afrobeats");
                                 options.setAppActivity("com.suenare.iafrobeats.afrobeats.SplashActivity");
-                                options.setNewCommandTimeout(Duration.ofSeconds(600));
+                                options.setNewCommandTimeout(Duration.ofSeconds(300));
                                 options.setAppWaitActivity("*");
-                                options.setAppWaitDuration(Duration.ofSeconds(60));
-                                options.setNoReset(true);
+                                options.setAppWaitDuration(Duration.ofSeconds(30));
+                                options.setNoReset(false);
                                 options.setFullReset(false);
-                                options.setSkipServerInstallation(true);
-                                options.setSkipDeviceInitialization(true);
-                                options.setUiautomator2ServerInstallTimeout(Duration.ofSeconds(60));
+                                options.setUiautomator2ServerInstallTimeout(Duration.ofSeconds(180));
+                                options.setUiautomator2ServerLaunchTimeout(Duration.ofSeconds(180));
+                                options.setUiautomator2ServerReadTimeout(Duration.ofSeconds(120));
                                 driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), options);
                                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 

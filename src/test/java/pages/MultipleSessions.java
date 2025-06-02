@@ -16,153 +16,172 @@ import pageObjects.SessionObjects;
 public class MultipleSessions extends MusicPad
 {
 
-	List<String> sessionList = new ArrayList<String>();
-	SessionObjects sessionObjects = new SessionObjects();
-	MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
-	MusicPadObjects musicPadObjects = new MusicPadObjects();
-	
-	EditMusicPad editMusicPad = new EditMusicPad(driver);
-	public MultipleSessions(AppiumDriver driver)
-	{
-		
-		super(driver);
-		PageFactory.initElements(new AppiumFieldDecorator(driver),
-		sessionObjects);
-		PageFactory.initElements(new AppiumFieldDecorator(driver),
-		mainScreenPageObject);
-		PageFactory.initElements(new AppiumFieldDecorator(driver),
-		musicPadObjects);
-	}
+        List<String> sessionList = new ArrayList<String>();
+        SessionObjects sessionObjects = new SessionObjects();
+        MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
+        MusicPadObjects musicPadObjects = new MusicPadObjects();
+        
+        EditMusicPad editMusicPad = new EditMusicPad(driver);
+        public MultipleSessions(AppiumDriver driver)
+        {
+                
+                super(driver);
+                PageFactory.initElements(new AppiumFieldDecorator(driver),
+                sessionObjects);
+                PageFactory.initElements(new AppiumFieldDecorator(driver),
+                mainScreenPageObject);
+                PageFactory.initElements(new AppiumFieldDecorator(driver),
+                musicPadObjects);
+        }
 
-	public void multipleSessionSelected()
-	{
-		findWebElementByIDAndClick(sessionObjects.settingButton);
-		findWebElementByIDAndClick(sessionObjects.mutipleSessionToggleButton);
-		findWebElementByIDAndClick(sessionObjects.backButtonSetting);
-	}
+        public void multipleSessionSelected()
+        {
+                try {
+                        // Use direct element finding to avoid stale element issues
+                        findAndClickElementById("com.suenare.iafrobeats.afrobeats:id/img_setting");
+                        wait(1);
+                        WebElement toggleButton = driver.findElement(org.openqa.selenium.By.xpath(".//*[@resource-id='com.suenare.iafrobeats.afrobeats:id/llSessions']//*[@resource-id='com.suenare.iafrobeats.afrobeats:id/toggle_sessions']"));
+                        toggleButton.click();
+                        wait(1);
+                        findAndClickElementById("com.suenare.iafrobeats.afrobeats:id/img_back_settings");
+                } catch (Exception e) {
+                        System.out.println("Error in multipleSessionSelected: " + e.getMessage());
+                        // Fallback to original method
+                        findWebElementByIDAndClick(sessionObjects.settingButton);
+                        findWebElementByIDAndClick(sessionObjects.mutipleSessionToggleButton);
+                        findWebElementByIDAndClick(sessionObjects.backButtonSetting);
+                }
+        }
 
-	public boolean createMutipleSession(int number)
-	{
-		try
-		{
-			sessionList.add("African Kit");
-			boolean result = true;
-			for (int i = 1; i <= number; i++)
-			{
-				findWebElementByIDAndClick(sessionObjects.burgerMenu);
-				findWebElementByIDAndClick(sessionObjects.addButtonSessions);
-				String newSessionName = "New Session " + i;
-				if(main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
-					sessionObjects.sessionNameTextBox.click();
-					int num=sessionObjects.sessionNameTextBox.getText().length();
-					for (int j = 0; j < num; j++) 
-					{
-						sessionObjects.sessionNameTextBox.sendKeys(Keys.DELETE);
-					}
-				
-				}
-				sessionObjects.sessionNameTextBox.clear();
-				sessionObjects.sessionNameTextBox.sendKeys(newSessionName);
-				sessionList.add(newSessionName);
-				if(main.Core.getPlatformName().equalsIgnoreCase("iOS"))
-					findWebElementByIDAndClick(sessionObjects.openButtonSessions);
-				findWebElementByIDAndClick(sessionObjects.openButtonSessions);
-				wait(3);
-				String sessionName = mainScreenPageObject.mainPageTitle
-				.getText();
-				if (newSessionName.equals(sessionName))
-				{
-					
-					result = true;
-				}
-				else
-				{
-					result = false;
-				}
-				boolean loadResult = editMusicPad.verifyLoadMusicToPad();
-				findWebElementByIDAndClick(musicPadObjects.freesamplesback);
-				findWebElementByIDAndClick(musicPadObjects.editPads);	
-				boolean playTrackResult = editMusicPad.playAllAddedTrack();
+        public boolean createMutipleSession(int number)
+        {
+                try
+                {
+                        sessionList.add("African Kit");
+                        boolean result = true;
+                        for (int i = 1; i <= number; i++)
+                        {
+                                try {
+                                        findAndClickElementById("com.suenare.iafrobeats.afrobeats:id/img_menu");
+                                        wait(1);
+                                        findAndClickElementById("com.suenare.iafrobeats.afrobeats:id/txt_add");
+                                } catch (Exception e) {
+                                        System.out.println("Error clicking burger menu or add button: " + e.getMessage());
+                                        findWebElementByIDAndClick(sessionObjects.burgerMenu);
+                                        findWebElementByIDAndClick(sessionObjects.addButtonSessions);
+                                }
+                                String newSessionName = "New Session " + i;
+                                if(main.Core.getPlatformName().equalsIgnoreCase("iOS")) {
+                                        sessionObjects.sessionNameTextBox.click();
+                                        int num=sessionObjects.sessionNameTextBox.getText().length();
+                                        for (int j = 0; j < num; j++) 
+                                        {
+                                                sessionObjects.sessionNameTextBox.sendKeys(Keys.DELETE);
+                                        }
+                                
+                                }
+                                sessionObjects.sessionNameTextBox.clear();
+                                sessionObjects.sessionNameTextBox.sendKeys(newSessionName);
+                                sessionList.add(newSessionName);
+                                if(main.Core.getPlatformName().equalsIgnoreCase("iOS"))
+                                        findWebElementByIDAndClick(sessionObjects.openButtonSessions);
+                                findWebElementByIDAndClick(sessionObjects.openButtonSessions);
+                                wait(3);
+                                String sessionName = mainScreenPageObject.mainPageTitle
+                                .getText();
+                                if (newSessionName.equals(sessionName))
+                                {
+                                        
+                                        result = true;
+                                }
+                                else
+                                {
+                                        result = false;
+                                }
+                                boolean loadResult = editMusicPad.verifyLoadMusicToPad();
+                                findWebElementByIDAndClick(musicPadObjects.freesamplesback);
+                                findWebElementByIDAndClick(musicPadObjects.editPads);   
+                                boolean playTrackResult = editMusicPad.playAllAddedTrack();
 
-				if (loadResult && playTrackResult && result)
-				{
-					result = true;
-				}
-				else
-				{
-					result = false;
-				}
-			}
+                                if (loadResult && playTrackResult && result)
+                                {
+                                        result = true;
+                                }
+                                else
+                                {
+                                        result = false;
+                                }
+                        }
 
-			return result;
-		}
-		catch (Exception e)
-		{
-			System.out.println(e.getMessage());
-			return false;
-		}
-	}
+                        return result;
+                }
+                catch (Exception e)
+                {
+                        System.out.println(e.getMessage());
+                        return false;
+                }
+        }
 
-	public void goToMultipleSessions()
-	{
-		findWebElementByIDAndClick(sessionObjects.btnCart);
-	}
+        public void goToMultipleSessions()
+        {
+                findWebElementByIDAndClick(sessionObjects.btnCart);
+        }
 
-	public boolean verifyMutipleSession()
-	{
-		try
-		{
-			boolean finalResult = true;
+        public boolean verifyMutipleSession()
+        {
+                try
+                {
+                        boolean finalResult = true;
 
-			for (int i = 0; i < sessionList.size(); i++)
-			{
-				if (sessionList.get(i)
-				.equals(sessionObjects.sessionName.get(i)))
-				{
-					findWebElementByIDAndClick(sessionObjects.sessionName
-					.get(i));
-					if (sessionObjects.sessionName.get(i).equals(
-					sessionObjects.sessionNameTextBox.getText()))
+                        for (int i = 0; i < sessionList.size(); i++)
+                        {
+                                if (sessionList.get(i)
+                                .equals(sessionObjects.sessionName.get(i)))
+                                {
+                                        findWebElementByIDAndClick(sessionObjects.sessionName
+                                        .get(i));
+                                        if (sessionObjects.sessionName.get(i).equals(
+                                        sessionObjects.sessionNameTextBox.getText()))
 
-					{
-						System.out.println("Created Session Verified");
-						findWebElementByIDAndClick(sessionObjects.openButtonSessions);
-						for (int j = 0; j < getNumberofusedPads(); j++)
-						{
-							findWebElementByIDAndClick(musicPadObjects.musicPadIcon
-							.get(i));
-							wait(1);
-							boolean play = checkElementDisplayed(musicPadObjects.playPauseButton);
-							findWebElementByIDAndClick(musicPadObjects.playPauseButton);
-							wait(1);
-							boolean pause = checkElementDisplayed(musicPadObjects.progressBar);
-							if (play && pause)
-							{
-								System.out
-								.println("track play and stop succefully.");
-							}
-							else
-							{
-								finalResult = false;
-								break;
-							}
+                                        {
+                                                System.out.println("Created Session Verified");
+                                                findWebElementByIDAndClick(sessionObjects.openButtonSessions);
+                                                for (int j = 0; j < getNumberofusedPads(); j++)
+                                                {
+                                                        findWebElementByIDAndClick(musicPadObjects.musicPadIcon
+                                                        .get(i));
+                                                        wait(1);
+                                                        boolean play = checkElementDisplayed(musicPadObjects.playPauseButton);
+                                                        findWebElementByIDAndClick(musicPadObjects.playPauseButton);
+                                                        wait(1);
+                                                        boolean pause = checkElementDisplayed(musicPadObjects.progressBar);
+                                                        if (play && pause)
+                                                        {
+                                                                System.out
+                                                                .println("track play and stop succefully.");
+                                                        }
+                                                        else
+                                                        {
+                                                                finalResult = false;
+                                                                break;
+                                                        }
 
-						}
-						finalResult = true;
-					}
-				}
-				else
-				{
-					finalResult = false;
-					break;
-				}
-			}
-			return finalResult;
-		}
-		catch (Exception e)
-		{
-			System.out.println(e.getMessage());
-			return false;
-		}
-	}
+                                                }
+                                                finalResult = true;
+                                        }
+                                }
+                                else
+                                {
+                                        finalResult = false;
+                                        break;
+                                }
+                        }
+                        return finalResult;
+                }
+                catch (Exception e)
+                {
+                        System.out.println(e.getMessage());
+                        return false;
+                }
+        }
 }
