@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
-  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+<suite name="Failed suite [Testng Cucumber Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="Run All Tests on Android(failed)" verbose="0">
+    <parameter name="browser" value="Android"/>
     <classes>
       <class name="main.CucumberRunner">
         <methods>
@@ -13,5 +14,5 @@
         </methods>
       </class> <!-- main.CucumberRunner -->
     </classes>
-  </test> <!-- Surefire test(failed) -->
-</suite> <!-- Failed suite [Surefire suite] -->
+  </test> <!-- Run All Tests on Android(failed) -->
+</suite> <!-- Failed suite [Testng Cucumber Suite] -->

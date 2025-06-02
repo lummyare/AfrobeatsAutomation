@@ -12,11 +12,11 @@
   <artifactId>Afrobeats</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 <dependencies>
-                <!-- Selenium WebDriver - Updated to 4.x for Appium 2.x compatibility -->
+                <!-- Selenium WebDriver - Compatible version for Appium 2.x -->
                 <dependency>
                         <groupId>org.seleniumhq.selenium</groupId>
                         <artifactId>selenium-java</artifactId>
-                        <version>4.15.0</version>
+                        <version>4.11.0</version>
                 </dependency>
                 
                 <!-- Appium Java Client - Updated to 8.x for Appium 2.x -->
@@ -24,6 +24,13 @@
                         <groupId>io.appium</groupId>
                         <artifactId>java-client</artifactId>
                         <version>8.6.0</version>
+                </dependency>
+                
+                <!-- HTTP Client for Selenium -->
+                <dependency>
+                        <groupId>org.seleniumhq.selenium</groupId>
+                        <artifactId>selenium-http-jdk-client</artifactId>
+                        <version>4.11.0</version>
                 </dependency>
                 
                 <!-- Cucumber - Updated to latest version -->

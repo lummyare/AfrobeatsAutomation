@@ -41,6 +41,9 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
         public void openBroswer(String browser) throws IOException, InterruptedException {
 
                 try {
+                        // Set system properties for HTTP client
+                        System.setProperty("webdriver.http.factory", "jdk-http-client");
+                        System.setProperty("selenium.manager.enabled", "false");
                         Properties prop = new Properties();
                         String propFileName = "config.properties";
 
@@ -73,7 +76,7 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                                 options.setUdid(udidIOS);
                                 options.setAutomationName("XCUITest");
                         
-                                driver = new IOSDriver(new URL("http://0.0.0.0:4723/"), options);
+                                driver = new IOSDriver(new URL("http://0.0.0.0:4723/wd/hub"), options);
                                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                                 driver.switchTo().alert().accept();
                                 
@@ -87,7 +90,15 @@ public class CucumberRunner extends AbstractTestNGCucumberTests {
                                 options.setPlatformVersion(androidPlatformVersion);
                                 options.setPlatformName("Android");
                                 options.setApp(androidAppPath);
-                                driver = new AndroidDriver(new URL("http://0.0.0.0:4723/"), options);
+                                options.setAutomationName("UiAutomator2");
+                                options.setAppPackage("com.suenare.iafrobeats.afrobeats");
+                                options.setAppActivity("com.suenare.iafrobeats.afrobeats.SplashActivity");
+                                options.setNewCommandTimeout(Duration.ofSeconds(300));
+                                options.setAppWaitActivity("*");
+                                options.setAppWaitDuration(Duration.ofSeconds(30));
+                                options.setNoReset(false);
+                                options.setFullReset(false);
+                                driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), options);
                                 driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(80));
 
                                 // Set platform for Core utility

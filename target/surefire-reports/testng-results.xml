@@ -2,15 +2,15 @@
 <testng-results ignored="0" total="10" passed="0" failed="10" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-05-31T19:54:00 UTC" name="Surefire suite" finished-at="2025-05-31T19:54:11 UTC" duration-ms="10773">
+  <suite started-at="2025-06-02T05:03:38 UTC" name="Testng Cucumber Suite" finished-at="2025-06-02T05:05:16 UTC" duration-ms="98305">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-05-31T19:54:00 UTC" name="Surefire test" finished-at="2025-05-31T19:54:11 UTC" duration-ms="10773">
+    <test started-at="2025-06-02T05:03:38 UTC" name="Run All Tests on Android" finished-at="2025-06-02T05:05:16 UTC" duration-ms="98305">
       <class name="main.CucumberRunner">
-        <test-method is-config="true" signature="openBroswer(java.lang.String)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:00 UTC" name="openBroswer" finished-at="2025-05-31T19:54:00 UTC" duration-ms="49" status="PASS">
+        <test-method is-config="true" signature="openBroswer(java.lang.String)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:03:38 UTC" name="openBroswer" finished-at="2025-06-02T05:05:05 UTC" duration-ms="87309" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -21,18 +21,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBroswer -->
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:00 UTC" name="setUpClass" finished-at="2025-05-31T19:54:00 UTC" duration-ms="343" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:05 UTC" name="setUpClass" finished-at="2025-06-02T05:05:06 UTC" duration-ms="372" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@76b11572]]>
+                <![CDATA[org.testng.TestRunner@2ef4e7f3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:00 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:01 UTC" duration-ms="352" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:06 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:06 UTC" duration-ms="373" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -59,7 +59,7 @@ at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomati
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:01 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:01 UTC" duration-ms="491" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:06 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:06 UTC" duration-ms="412" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -83,7 +83,7 @@ at java.base/java.util.Optional.orElseThrow(Optional.java:403)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$gaQxDymj.get(Unknown Source)
+at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$qoodMPrX.get(Unknown Source)
 at pages.MusicPad.playMusic(MusicPad.java:59)
 at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
@@ -93,7 +93,7 @@ at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resou
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:01 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:01 UTC" duration-ms="297" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:06 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:07 UTC" duration-ms="277" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -117,7 +117,7 @@ at java.base/java.util.Optional.orElseThrow(Optional.java:403)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$tMEOybAq.get(Unknown Source)
+at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$O0vG87us.get(Unknown Source)
 at pages.MusicPad.playMusic(MusicPad.java:59)
 at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
@@ -127,7 +127,7 @@ at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resou
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:01 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:02 UTC" duration-ms="123" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:07 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:07 UTC" duration-ms="132" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -151,7 +151,7 @@ at java.base/java.util.Optional.orElseThrow(Optional.java:403)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$BrpzMkpo.getText(Unknown Source)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$63m2SLgk.getText(Unknown Source)
 at main.Core.getText(Core.java:101)
 at pages.Slider.openSlider(Slider.java:30)
 at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
@@ -162,7 +162,7 @@ at ✽.I tap on the number beside the green light on the top left(file:///home/u
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:02 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:02 UTC" duration-ms="62" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:07 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:07 UTC" duration-ms="57" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -186,7 +186,7 @@ at java.base/java.util.Optional.orElseThrow(Optional.java:403)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Y9OMS06g.click(Unknown Source)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Af3jOfhI.click(Unknown Source)
 at main.Core.findWebElementByIDAndClick(Core.java:94)
 at pages.NormButton.clickOnVolNorm(NormButton.java:30)
 at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
@@ -197,7 +197,7 @@ at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/tes
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:02 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:02 UTC" duration-ms="191" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:07 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:07 UTC" duration-ms="244" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -221,7 +221,7 @@ at java.base/java.util.Optional.orElseThrow(Optional.java:403)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$pxbIuzZO.click(Unknown Source)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$szZxXaSY.click(Unknown Source)
 at main.Core.findWebElementByIDAndClick(Core.java:94)
 at pages.EditMusicPad.clickEditPads(EditMusicPad.java:56)
 at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
@@ -232,7 +232,7 @@ at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/reso
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:02 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:07 UTC" duration-ms="5178" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:07 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:12 UTC" duration-ms="5203" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -263,7 +263,7 @@ at ✽.The assert the store button is showing store count 40(file:///home/ubuntu
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:07 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:09 UTC" duration-ms="2067" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:12 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:14 UTC" duration-ms="2086" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -294,7 +294,7 @@ at ✽.Tap tempo button should be deactivated(file:///home/ubuntu/AfrobeatsAutom
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:09 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:10 UTC" duration-ms="629" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:14 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:15 UTC" duration-ms="673" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -318,7 +318,7 @@ at java.base/java.util.Optional.orElseThrow(Optional.java:403)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$bz5RmVn0.click(Unknown Source)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ve8tbfoM.click(Unknown Source)
 at main.Core.findWebElementByIDAndClick(Core.java:94)
 at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:39)
 at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
@@ -329,7 +329,7 @@ at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/Afrob
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:10 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-05-31T19:54:11 UTC" duration-ms="911" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:15 UTC" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-06-02T05:05:16 UTC" duration-ms="1081" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -353,7 +353,7 @@ at java.base/java.util.Optional.orElseThrow(Optional.java:403)
 at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$n4ZsLLcx.click(Unknown Source)
+at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$ZebtkhYD.click(Unknown Source)
 at main.Core.findWebElementByIDAndClick(Core.java:94)
 at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:38)
 at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
@@ -364,15 +364,15 @@ at ✽.go to Multiple session page(file:///home/ubuntu/AfrobeatsAutomation/src/t
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:11 UTC" name="tearDownClass" finished-at="2025-05-31T19:54:11 UTC" duration-ms="48" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:16 UTC" name="tearDownClass" finished-at="2025-06-02T05:05:16 UTC" duration-ms="51" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
-        <test-method is-config="true" signature="closebrowser()[pri:0, instance:main.CucumberRunner@48ae9b55]" started-at="2025-05-31T19:54:11 UTC" name="closebrowser" finished-at="2025-05-31T19:54:11 UTC" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="closebrowser()[pri:0, instance:main.CucumberRunner@1283bb96]" started-at="2025-06-02T05:05:16 UTC" name="closebrowser" finished-at="2025-06-02T05:05:16 UTC" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closebrowser -->
       </class> <!-- main.CucumberRunner -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+    </test> <!-- Run All Tests on Android -->
+  </suite> <!-- Testng Cucumber Suite -->
 </testng-results>
