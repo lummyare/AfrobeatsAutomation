@@ -31,10 +31,11 @@ class EndToEndAutomation {
         this.appiumProcess = null;
         this.appiumPid = null;
         
-        // Set up Android SDK paths
-        this.androidSdkPath = '/home/ubuntu/android-sdk';
-        this.adbPath = path.join(this.androidSdkPath, 'platform-tools', 'adb');
-        this.aaptPath = path.join(this.androidSdkPath, 'build-tools');
+        // Set up Android SDK paths with cross-platform detection
+        const { androidSdkPath, adbPath, aaptPath } = this.detectAndroidSdkPaths();
+        this.androidSdkPath = androidSdkPath;
+        this.adbPath = adbPath;
+        this.aaptPath = aaptPath;
         
         this.config = {
             appiumHost: '127.0.0.1',
@@ -57,6 +58,91 @@ class EndToEndAutomation {
         console.log(`${colors.blue}=== End-to-End Appium Automation Workflow ===${colors.reset}`);
         console.log(`Timestamp: ${new Date().toISOString()}`);
         console.log('');
+    }
+
+    detectAndroidSdkPaths() {
+        const platform = os.platform();
+        const adbExecutable = platform === 'win32' ? 'adb.exe' : 'adb';
+        
+        // Primary: Check environment variables
+        const androidHome = process.env.ANDROID_HOME || process.env.ANDROID_SDK_ROOT;
+        if (androidHome && fs.existsSync(androidHome)) {
+            const adbPath = path.join(androidHome, 'platform-tools', adbExecutable);
+            if (fs.existsSync(adbPath)) {
+                this.log(`✓ Found Android SDK via environment variable: ${androidHome}`, colors.green);
+                return {
+                    androidSdkPath: androidHome,
+                    adbPath: adbPath,
+                    aaptPath: path.join(androidHome, 'build-tools')
+                };
+            }
+        }
+        
+        // Secondary: Try to find adb in PATH
+        try {
+            const whichCommand = platform === 'win32' ? 'where' : 'which';
+            const adbInPath = execSync(`${whichCommand} ${adbExecutable}`, { encoding: 'utf8', stdio: 'pipe' }).trim();
+            if (adbInPath && fs.existsSync(adbInPath)) {
+                // Extract SDK path from adb path (go up two directories from platform-tools/adb)
+                const platformToolsDir = path.dirname(adbInPath);
+                const sdkPath = path.dirname(platformToolsDir);
+                this.log(`✓ Found ADB in PATH: ${adbInPath}`, colors.green);
+                return {
+                    androidSdkPath: sdkPath,
+                    adbPath: adbInPath,
+                    aaptPath: path.join(sdkPath, 'build-tools')
+                };
+            }
+        } catch (error) {
+            // Continue to fallback options
+        }
+        
+        // Platform-specific default locations
+        const defaultPaths = [];
+        if (platform === 'darwin') { // macOS
+            defaultPaths.push(
+                path.join(os.homedir(), 'Library/Android/sdk'),
+                '/usr/local/share/android-sdk',
+                '/opt/android-sdk'
+            );
+        } else if (platform === 'win32') { // Windows
+            defaultPaths.push(
+                path.join(os.homedir(), 'AppData/Local/Android/Sdk'),
+                'C:/Android/Sdk',
+                'C:/Program Files/Android/Sdk'
+            );
+        } else { // Linux
+            defaultPaths.push(
+                '/home/ubuntu/android-sdk',
+                path.join(os.homedir(), 'Android/Sdk'),
+                '/usr/local/android-sdk',
+                '/opt/android-sdk'
+            );
+        }
+        
+        // Try default locations
+        for (const sdkPath of defaultPaths) {
+            const adbPath = path.join(sdkPath, 'platform-tools', adbExecutable);
+            if (fs.existsSync(adbPath)) {
+                this.log(`✓ Found Android SDK at default location: ${sdkPath}`, colors.green);
+                return {
+                    androidSdkPath: sdkPath,
+                    adbPath: adbPath,
+                    aaptPath: path.join(sdkPath, 'build-tools')
+                };
+            }
+        }
+        
+        // If nothing found, throw clear error
+        const errorMessage = `Android SDK not found. Please ensure Android SDK is installed and either:
+1. Set ANDROID_HOME or ANDROID_SDK_ROOT environment variable
+2. Add adb to your PATH
+3. Install Android SDK in a default location:
+   - macOS: ~/Library/Android/sdk
+   - Windows: %USERPROFILE%/AppData/Local/Android/Sdk
+   - Linux: ~/Android/Sdk`;
+        
+        throw new Error(errorMessage);
     }
 
     log(message, color = colors.reset) {
