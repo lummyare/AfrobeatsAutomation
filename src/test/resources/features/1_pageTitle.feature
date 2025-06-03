@@ -1,5 +1,6 @@
 Feature: Title verification
 
+  @smoke @critical
   Scenario: When the application is launched, title should be "African Kit"
 
     Given I launch the App

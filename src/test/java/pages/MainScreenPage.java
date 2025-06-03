@@ -15,33 +15,40 @@ import pageObjects.MainScreenPageObject;
 public class MainScreenPage extends Core
 {
 
-	HashSet<String> musicTracklist = new HashSet<String>();
-	List<String> sessionList = null;
-	MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
+        HashSet<String> musicTracklist = new HashSet<String>();
+        List<String> sessionList = null;
+        MainScreenPageObject mainScreenPageObject = new MainScreenPageObject();
 
-	public MainScreenPage(AppiumDriver driver)
-	{
-		this.driver = driver;
-		PageFactory.initElements(new AppiumFieldDecorator(driver),
-		mainScreenPageObject);
-	}
+        public MainScreenPage(AppiumDriver driver)
+        {
+                this.driver = driver;
+                PageFactory.initElements(new AppiumFieldDecorator(driver),
+                mainScreenPageObject);
+        }
 
-	public boolean verifyPageTitle()
-	{
-		try
-		{
-			String pageTitle = getText(mainScreenPageObject.mainPageTitle);
-			sessionList = new ArrayList<String>();
-			sessionList.add(pageTitle);
-			String Msg = "African Kit";
-			boolean strtxt = pageTitle.equalsIgnoreCase(Msg);
-			System.out.println(strtxt);
-			return strtxt;
-		}
-		catch (Exception e)
-		{
-			System.out.println(e.getMessage());
-			return false;
-		}
-	}
+        public boolean verifyPageTitle()
+        {
+                try
+                {
+                        // Add explicit wait for element to be present
+                        Thread.sleep(3000);
+                        String pageTitle = getText(mainScreenPageObject.mainPageTitle);
+                        sessionList = new ArrayList<String>();
+                        sessionList.add(pageTitle);
+                        String expectedMsg = "African Kit";
+                        
+                        System.out.println("Expected page title: " + expectedMsg);
+                        System.out.println("Actual page title: " + pageTitle);
+                        
+                        boolean strtxt = pageTitle.equalsIgnoreCase(expectedMsg);
+                        System.out.println("Title match result: " + strtxt);
+                        return strtxt;
+                }
+                catch (Exception e)
+                {
+                        System.out.println("Exception in verifyPageTitle: " + e.getMessage());
+                        e.printStackTrace();
+                        return false;
+                }
+        }
 }

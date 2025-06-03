@@ -1,0 +1,261 @@
+02:00:58.166 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/home/ubuntu/AfrobeatsAutomation/testng.xml"
+Exception: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'chatllm-computer-15309a32a6-c6c9967c5-tfh5r', ip: '100.111.146.51'
+Jun 03, 2025 2:00:58 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
+
+@smoke @critical
+Scenario: When the application is launched, title should be "African Kit" [90m# src/test/resources/features/1_pageTitle.feature:4[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                  [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+02:00:59.677 [TestNG-test=Run All Tests on Android-1] INFO stepdefinition.PageTitle -- Into App is launched
+  [32mWhen [0m[32mApp is launched[0m                                                    [90m# stepdefinition.PageTitle.whenAppIsLaunched()[0m
+Exception in verifyPageTitle: The element By.id: mainPageTitle is not locatable anymore because its context has been garbage collected
+java.lang.IllegalStateException: The element By.id: mainPageTitle is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gmIY8tjR.getText(Unknown Source)
+	at main.Core.getText(Core.java:110)
+	at pages.MainScreenPage.verifyPageTitle(MainScreenPage.java:35)
+	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+  [31mThen [0m[31mAssert the Page name is African Kit[0m                                [90m# stepdefinition.PageTitle.verifyPageName()[0m
+      [31mjava.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
+	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:8)
+[0m
+
+Scenario: When the music is played/paused, progress bar should be enabled/disabled [90m# src/test/resources/features/2_musicPlayPause.feature:3[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                           [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+Elements By.id: trackNamePad are not locatable anymore because their context has been garbage collected
+  [32mAnd [0m[32mI Tap to play and tap to stop playing each loaded pads[0m                       [90m# stepdefinition.MusicPlayPause.playandPauseAllTrack()[0m
+Error clicking music pad: null
+  [31mWhen [0m[31mI tap on music pad[0m                                                          [90m# stepdefinition.MusicPlayPause.iTapOnMusicPad()[0m
+      [31mjava.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$LYkLoN1g.get(Unknown Source)
+	at pages.MusicPad.playMusic(MusicPad.java:72)
+	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
+	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
+[0m
+  [36mThen [0m[36mMusic should be played & progress bar should be displayed[0m                   [90m# stepdefinition.MusicPlayPause.musicShouldBePlayed()[0m
+  [36mAnd [0m[36mI tap on pause[0m                                                               [90m# stepdefinition.MusicPlayPause.iTapOnPause()[0m
+  [36mThen [0m[36mMusic should be paused & progress bar should be removed[0m                     [90m# stepdefinition.MusicPlayPause.musicShouldBePuased()[0m
+
+Scenario: When the music is played/paused for multiple pads, play/pause buttons should be displayed accordingnly [90m# src/test/resources/features/3_multipleMusicPlayPause.feature:3[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                                                         [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+Error clicking music pad: null
+  [31mWhen [0m[31mI tap on music pad[0m                                                                                        [90m# stepdefinition.MusicPlayPause.iTapOnMusicPad()[0m
+      [31mjava.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$OX8ffOk1.get(Unknown Source)
+	at pages.MusicPad.playMusic(MusicPad.java:72)
+	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
+	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
+[0m
+  [36mThen [0m[36mMusic should be played & progress bar should be displayed[0m                                                 [90m# stepdefinition.MusicPlayPause.musicShouldBePlayed()[0m
+  [36mAnd [0m[36mI tap on 2nd music pad[0m                                                                                     [90m# stepdefinition.MusicPlayPause.iTapOnSecondPad()[0m
+  [36mThen [0m[36mMusic should be played for 2nd pad[0m                                                                        [90m# stepdefinition.MusicPlayPause.musicMultiplePad()[0m
+  [36mAnd [0m[36mI tap on pause for 2nd pad[0m                                                                                 [90m# stepdefinition.MusicPlayPause.iPasueSecondPad()[0m
+  [36mThen [0m[36mMusic should be paused & progress bar should be removed[0m                                                   [90m# stepdefinition.MusicPlayPause.musicShouldBePuased()[0m
+
+Scenario: On moving slider, values should be changed                             [90m# src/test/resources/features/5_slider.feature:3[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                         [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+  [31mWhen [0m[31mI tap on the number beside the green light on the top left[0m                [90m# stepdefinition.SliderSteps.iTapOnNumberSlider()[0m
+      [31mjava.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PRMOOt7C.getText(Unknown Source)
+	at main.Core.getText(Core.java:110)
+	at pages.Slider.openSlider(Slider.java:30)
+	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
+	at ✽.I tap on the number beside the green light on the top left(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/5_slider.feature:6)
+[0m
+  [36mThen [0m[36mI should see a slider pop up[0m                                              [90m# stepdefinition.SliderSteps.iShouldSeeSlider()[0m
+  [36mAnd [0m[36mI "[0m[36m[1mincrease[0m[36m" slide to [0m[36m[1m170[0m[36m, I should see the same number reflect on the app[0m [90m# stepdefinition.SliderSteps.slideToNumner(java.lang.String,int)[0m
+  [36mAnd [0m[36mI "[0m[36m[1mdecrease[0m[36m" slide to [0m[36m[1m90[0m[36m, I should see the same number reflect on the app[0m  [90m# stepdefinition.SliderSteps.slideToNumner(java.lang.String,int)[0m
+  [36mAnd [0m[36mI tap on back button, slider pop up should close[0m                           [90m# stepdefinition.SliderSteps.goBack()[0m
+
+Scenario: VOL NORM should be enabled/disabled [90m# src/test/resources/features/6_volumeNorm.feature:3[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                      [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
+  [31mWhen [0m[31mI tap the VOL NORM button[0m              [90m# stepdefinition.VolNorm.iTapOnVolNorm()[0m
+      [31mjava.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$zBEwNlbI.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
+	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
+	at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/6_volumeNorm.feature:6)
+[0m
+  [36mThen [0m[36massert the button is deactivated[0m       [90m# stepdefinition.VolNorm.verifyButtonUnchecked()[0m
+  [36mAnd [0m[36mwhen I tap the button again[0m             [90m# stepdefinition.VolNorm.iTapButtonAgain()[0m
+  [36mThen [0m[36massert the button is activated back[0m    [90m# stepdefinition.VolNorm.verifyButtonCheckedBack()[0m
+
+Scenario: Free samples should be added to music pad                                                                                                                                                                [90m# src/test/resources/features/7_addFreeSamples.feature:3[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                                                                                                                                                           [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+02:01:04.389 [TestNG-test=Run All Tests on Android-1] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/txt_editPad
+Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/txt_editPad: Input must be set
+Error clicking edit pads: Input must be set
+  [31mWhen [0m[31mI tap the Edit page[0m                                                                                                                                                                                         [90m# stepdefinition.AddFreeSamples.iTapOnEditPad()[0m
+      [31mjava.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$1HhMItvY.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
+	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
+	at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/7_addFreeSamples.feature:5)
+[0m
+  [36mThen [0m[36mI should see the edit page show a Free Samples folder[0m                                                                                                                                                       [90m# stepdefinition.AddFreeSamples.verifyFolderDisplayed()[0m
+  [36mAnd [0m[36mI tap to open the folder[0m                                                                                                                                                                                     [90m# stepdefinition.AddFreeSamples.openFolder()[0m
+  [36mThen [0m[36mI can see audio contents of the folder[0m                                                                                                                                                                      [90m# stepdefinition.AddFreeSamples.seeAudioContent()[0m
+  [36mWhen [0m[36mI tap an empty virtual pad and I tap the first audio content in the Free Samples folder and assert the name of the audio content loaded is the same name of the audio content lapped in free sample folder.[0m [90m# stepdefinition.AddFreeSamples.tapOnEmptyPAD()[0m
+  [36mThen [0m[36mTap the Edit Pad button again[0m                                                                                                                                                                               [90m# stepdefinition.AddFreeSamples.tapOnEditPad()[0m
+  [36mThen [0m[36mtap to play and tap to stop each loaded pads Assert I can see all icons and each loaded pads are playing audio.[0m                                                                                             [90m# stepdefinition.AddFreeSamples.playAllLoadedMusic()[0m
+
+Scenario: Cart Items should be successfully purchase from Store Screen.            [90m# src/test/resources/features/8_purchaseStoreItems.feature:4[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                           [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+The element By.id: btnCartCount is not locatable anymore because its context has been garbage collected
+  [31mAnd [0m[31mThe assert the store button is showing store count 40[0m                        [90m# stepdefinition.StorePurchase.verifyCartCount()[0m
+      [31mjava.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepdefinition.StorePurchase.verifyCartCount(StorePurchase.java:22)
+	at ✽.The assert the store button is showing store count 40(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/8_purchaseStoreItems.feature:6)
+[0m
+  [36mWhen [0m[36mI tap on the store count[0m                                                    [90m# stepdefinition.StorePurchase.tapCartButton()[0m
+  [36mThen [0m[36mI see the store page[0m                                                        [90m# stepdefinition.StorePurchase.verifyStorePage()[0m
+  [36mAnd [0m[36mI should see 40 items in list[0m                                                [90m# stepdefinition.StorePurchase.verifyItemList()[0m
+  [36mThen [0m[36mI refresh the page[0m                                                          [90m# stepdefinition.StorePurchase.refreshList()[0m
+  [36mWhen [0m[36mI tap on RESTORE PURCHASES button and purchase all items[0m                    [90m# stepdefinition.StorePurchase.restorePurchase()[0m
+  [36mThen [0m[36mExit Store page and Go to Edit Page[0m                                         [90m# stepdefinition.StorePurchase.navigateToEditPage()[0m
+  [36mThen [0m[36mAssert all Folder names showing are all contents downloaded from Store page[0m [90m# stepdefinition.StorePurchase.verifyListOnEditPads()[0m
+
+Scenario: TAP TEMPO Button should be deactivated after tapping on that mutiple times [90m# src/test/resources/features/9_tapTempoButton.feature:4[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                             [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+  [32mWhen [0m[32mI enable Tap Tempo button from Settings[0m                                       [90m# stepdefinition.TapTempo.enableTapTempo()[0m
+The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
+  [32mWhen [0m[32mI tap on Tap Tempo button multiple times[0m                                      [90m# stepdefinition.TapTempo.iTapOnTapTempoButton()[0m
+The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
+  [31mThen [0m[31mTap tempo button should be deactivated[0m                                        [90m# stepdefinition.TapTempo.verifyButtonDeactivated()[0m
+      [31mjava.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepdefinition.TapTempo.verifyButtonDeactivated(TapTempo.java:35)
+	at ✽.Tap tempo button should be deactivated(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/9_tapTempoButton.feature:8)
+[0m
+
+Scenario: Multiple sessions should be added to music pad                           [90m# src/test/resources/features/multipleSessions.feature:3[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                           [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+02:01:12.461 [TestNG-test=Run All Tests on Android-1] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_setting
+Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/img_setting: Input must be set
+Error in multipleSessionSelected: Input must be set
+  [31mThen [0m[31mTap on Multiple session button on the top right[0m                             [90m# stepdefinition.AddMultipleSessions.tapOnMultipleSessions()[0m
+      [31mjava.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hCsqjmXj.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
+	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
+	at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/multipleSessions.feature:6)
+[0m
+  [36mAnd [0m[36mTap the plus icon create a new Sessions, edit page & repeat scenario [0m[36m[1m5[0m[36m times[0m [90m# stepdefinition.AddMultipleSessions.addSession(int)[0m
+
+Scenario: All created sessiond should be listed in Session screen and Play and Pause for each loaded pads on each sessions pages [90m# src/test/resources/features/playAllPads.feature:3[0m
+Waiting for application to get launched
+  [32mGiven [0m[32mI launch the App[0m                                                                                                         [90m# stepdefinition.PageTitle.iLaunchTheApp()[0m
+02:01:13.575 [TestNG-test=Run All Tests on Android-1] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_menu
+Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/img_menu: Input must be set
+Error in multipleSessionsList: Input must be set
+  [31mThen [0m[31mgo to Multiple session page[0m                                                                                               [90m# stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions()[0m
+      [31mjava.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$jlQgm5n0.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
+	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
+	at ✽.go to Multiple session page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/playAllPads.feature:6)
+[0m
+  [36mAnd [0m[36mVerify All Created session are listed and Play each loaded pads on each sessions pages and stop playing all playing pads[0m   [90m# stepdefinition.VerifyMutipleSessions.addSession()[0m

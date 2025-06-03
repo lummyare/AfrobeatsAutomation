@@ -1,110 +1,161 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="0.464" tests="10" errors="0" skipped="0" failures="10">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="16.028" tests="10" errors="0" skipped="0" failures="10">
   <properties>
-    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
-    <property name="java.vm.version" value="11.0.27+6-post-Ubuntu-0ubuntu122.04"/>
-    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
-    <property name="maven.multiModuleProjectDirectory" value="/home/ubuntu/AfrobeatsAutomation"/>
-    <property name="java.vm.vendor" value="Ubuntu"/>
-    <property name="java.vendor.url" value="https://ubuntu.com/"/>
-    <property name="guice.disable.misplaced.annotation.check" value="true"/>
-    <property name="path.separator" value=":"/>
-    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
-    <property name="sun.os.patch.level" value="unknown"/>
-    <property name="user.country" value="US"/>
-    <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="/home/ubuntu/AfrobeatsAutomation"/>
-    <property name="java.vm.compressedOopsMode" value="32-bit"/>
-    <property name="java.runtime.version" value="11.0.27+6-post-Ubuntu-0ubuntu122.04"/>
-    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="os.arch" value="amd64"/>
-    <property name="java.io.tmpdir" value="/tmp"/>
-    <property name="line.separator" value="&#10;"/>
-    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="os.name" value="Linux"/>
-    <property name="suiteXmlFile" value="testng.xml"/>
-    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
-    <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
-    <property name="maven.conf" value="/usr/share/maven/conf"/>
-    <property name="jdk.debug" value="release"/>
-    <property name="java.class.version" value="55.0"/>
-    <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="5.15.0-1062-aws"/>
-    <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
-    <property name="user.home" value="/home/ubuntu"/>
-    <property name="user.timezone" value="Etc/UTC"/>
-    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
-    <property name="file.encoding" value="UTF-8"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
     <property name="java.specification.version" value="11"/>
-    <property name="user.name" value="ubuntu"/>
-    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
-    <property name="java.vm.specification.version" value="11"/>
+    <property name="appium.sessionTimeout" value="300"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/ubuntu/AfrobeatsAutomation/target/test-classes:/home/ubuntu/AfrobeatsAutomation/target/classes:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-java/4.11.0/selenium-java-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-api/4.11.0/selenium-api-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.11.0/selenium-chrome-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.11.0/selenium-chromium-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-json/4.11.0/selenium-json-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.11.0/selenium-manager-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v113/4.11.0/selenium-devtools-v113-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v114/4.11.0/selenium-devtools-v114-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v115/4.11.0/selenium-devtools-v115-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.11.0/selenium-devtools-v85-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.11.0/selenium-edge-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.11.0/selenium-firefox-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.11.0/selenium-ie-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.11.0/selenium-remote-driver-4.11.0.jar:/home/ubuntu/.m2/repository/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.92.Final/netty-transport-classes-kqueue-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.92.Final/netty-transport-native-kqueue-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-api/1.26.0/opentelemetry-api-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-context/1.26.0/opentelemetry-context-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.26.0/opentelemetry-exporter-logging-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.26.0/opentelemetry-sdk-metrics-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.26.0-alpha/opentelemetry-extension-incubator-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.26.0-alpha/opentelemetry-sdk-logs-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.26.0-alpha/opentelemetry-api-logs-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.26.0-alpha/opentelemetry-api-events-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.26.0/opentelemetry-sdk-common-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.26.0/opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.26.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.26.0/opentelemetry-sdk-trace-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.26.0/opentelemetry-sdk-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.26.0-alpha/opentelemetry-semconv-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/ubuntu/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/home/ubuntu/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/home/ubuntu/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/ubuntu/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/home/ubuntu/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.11.0/selenium-safari-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-support/4.11.0/selenium-support-4.11.0.jar:/home/ubuntu/.m2/repository/io/appium/java-client/8.6.0/java-client-8.6.0.jar:/home/ubuntu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/home/ubuntu/.m2/repository/commons-io/commons-io/2.14.0/commons-io-2.14.0.jar:/home/ubuntu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-http-jdk-client/4.11.0/selenium-http-jdk-client-4.11.0.jar:/home/ubuntu/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-http/4.11.0/selenium-http-4.11.0.jar:/home/ubuntu/.m2/repository/dev/failsafe/failsafe/3.3.1/failsafe-3.3.1.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/ubuntu/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/home/ubuntu/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/home/ubuntu/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/home/ubuntu/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/home/ubuntu/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/home/ubuntu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-testng/7.14.0/cucumber-testng-7.14.0.jar:/home/ubuntu/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar:/home/ubuntu/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/ubuntu/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/home/ubuntu/.m2/repository/net/masterthought/cucumber-reporting/5.7.5/cucumber-reporting-5.7.5.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.2.2/jackson-databind-2.13.2.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.2/jackson-annotations-2.13.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.2/jackson-core-2.13.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.2/jackson-datatype-jsr310-2.13.2.jar:/home/ubuntu/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/ubuntu/.m2/repository/joda-time/joda-time/2.12.2/joda-time-2.12.2.jar:/home/ubuntu/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar:/home/ubuntu/.m2/repository/org/jsoup/jsoup/1.15.4/jsoup-1.15.4.jar:/home/ubuntu/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20220608.1/owasp-java-html-sanitizer-20220608.1.jar:/home/ubuntu/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/home/ubuntu/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/ubuntu/.m2/repository/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar:/home/ubuntu/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/ubuntu/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/ubuntu/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/ubuntu/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar:/home/ubuntu/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar:/home/ubuntu/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/home/ubuntu/.m2/repository/org/apache/poi/poi-ooxml/5.2.4/poi-ooxml-5.2.4.jar:/home/ubuntu/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.4/poi-ooxml-lite-5.2.4.jar:/home/ubuntu/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/home/ubuntu/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar:/home/ubuntu/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/ubuntu/.m2/repository/org/apache/poi/poi/5.2.4/poi-5.2.4.jar:/home/ubuntu/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/ubuntu/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/home/ubuntu/.m2/repository/net/sourceforge/jtds/jtds/1.3.1/jtds-1.3.1.jar:/home/ubuntu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/ubuntu/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/ubuntu/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/home/ubuntu/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/ubuntu/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:"/>
+    <property name="java.vm.vendor" value="Ubuntu"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test -DsuiteXmlFile=testng.xml"/>
-    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="java.vendor.url" value="https://ubuntu.com/"/>
+    <property name="user.timezone" value="Etc/UTC"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Linux"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-11-openjdk-amd64/lib"/>
+    <property name="sun.java.command" value="/home/ubuntu/AfrobeatsAutomation/target/surefire/surefirebooter-20250603020057680_3.jar /home/ubuntu/AfrobeatsAutomation/target/surefire 2025-06-03T02-00-56_762-jvmRun1 surefire-20250603020057680_1tmp surefire_0-20250603020057680_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/ubuntu/AfrobeatsAutomation/target/test-classes:/home/ubuntu/AfrobeatsAutomation/target/classes:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-java/4.11.0/selenium-java-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-api/4.11.0/selenium-api-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/4.11.0/selenium-chrome-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-chromium-driver/4.11.0/selenium-chromium-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-json/4.11.0/selenium-json-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-manager/4.11.0/selenium-manager-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v113/4.11.0/selenium-devtools-v113-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v114/4.11.0/selenium-devtools-v114-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v115/4.11.0/selenium-devtools-v115-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-devtools-v85/4.11.0/selenium-devtools-v85-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/4.11.0/selenium-edge-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/4.11.0/selenium-firefox-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/4.11.0/selenium-ie-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/4.11.0/selenium-remote-driver-4.11.0.jar:/home/ubuntu/.m2/repository/io/netty/netty-buffer/4.1.92.Final/netty-buffer-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec-http/4.1.92.Final/netty-codec-http-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec/4.1.92.Final/netty-codec-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-handler/4.1.92.Final/netty-handler-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-common/4.1.92.Final/netty-common-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-classes-epoll/4.1.92.Final/netty-transport-classes-epoll-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-classes-kqueue/4.1.92.Final/netty-transport-classes-kqueue-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-epoll/4.1.92.Final/netty-transport-native-epoll-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.92.Final/netty-transport-native-kqueue-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-unix-common/4.1.92.Final/netty-transport-native-unix-common-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport/4.1.92.Final/netty-transport-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-resolver/4.1.92.Final/netty-resolver-4.1.92.Final.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-api/1.26.0/opentelemetry-api-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-context/1.26.0/opentelemetry-context-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-exporter-logging/1.26.0/opentelemetry-exporter-logging-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-metrics/1.26.0/opentelemetry-sdk-metrics-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-extension-incubator/1.26.0-alpha/opentelemetry-extension-incubator-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-logs/1.26.0-alpha/opentelemetry-sdk-logs-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-api-logs/1.26.0-alpha/opentelemetry-api-logs-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-api-events/1.26.0-alpha/opentelemetry-api-events-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-common/1.26.0/opentelemetry-sdk-common-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.26.0/opentelemetry-sdk-extension-autoconfigure-spi-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.26.0-alpha/opentelemetry-sdk-extension-autoconfigure-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk-trace/1.26.0/opentelemetry-sdk-trace-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-sdk/1.26.0/opentelemetry-sdk-1.26.0.jar:/home/ubuntu/.m2/repository/io/opentelemetry/opentelemetry-semconv/1.26.0-alpha/opentelemetry-semconv-1.26.0-alpha.jar:/home/ubuntu/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/home/ubuntu/.m2/repository/org/asynchttpclient/async-http-client/2.12.3/async-http-client-2.12.3.jar:/home/ubuntu/.m2/repository/org/asynchttpclient/async-http-client-netty-utils/2.12.3/async-http-client-netty-utils-2.12.3.jar:/home/ubuntu/.m2/repository/io/netty/netty-codec-socks/4.1.60.Final/netty-codec-socks-4.1.60.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-handler-proxy/4.1.60.Final/netty-handler-proxy-4.1.60.Final.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-epoll/4.1.60.Final/netty-transport-native-epoll-4.1.60.Final-linux-x86_64.jar:/home/ubuntu/.m2/repository/io/netty/netty-transport-native-kqueue/4.1.60.Final/netty-transport-native-kqueue-4.1.60.Final-osx-x86_64.jar:/home/ubuntu/.m2/repository/org/reactivestreams/reactive-streams/1.0.3/reactive-streams-1.0.3.jar:/home/ubuntu/.m2/repository/com/typesafe/netty/netty-reactive-streams/2.0.4/netty-reactive-streams-2.0.4.jar:/home/ubuntu/.m2/repository/com/sun/activation/jakarta.activation/1.2.2/jakarta.activation-1.2.2.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/4.11.0/selenium-safari-driver-4.11.0.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-support/4.11.0/selenium-support-4.11.0.jar:/home/ubuntu/.m2/repository/io/appium/java-client/8.6.0/java-client-8.6.0.jar:/home/ubuntu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-lang3/3.13.0/commons-lang3-3.13.0.jar:/home/ubuntu/.m2/repository/commons-io/commons-io/2.14.0/commons-io-2.14.0.jar:/home/ubuntu/.m2/repository/org/slf4j/slf4j-api/2.0.9/slf4j-api-2.0.9.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-http-jdk-client/4.11.0/selenium-http-jdk-client-4.11.0.jar:/home/ubuntu/.m2/repository/com/google/auto/service/auto-service-annotations/1.0.1/auto-service-annotations-1.0.1.jar:/home/ubuntu/.m2/repository/org/seleniumhq/selenium/selenium-http/4.11.0/selenium-http-4.11.0.jar:/home/ubuntu/.m2/repository/dev/failsafe/failsafe/3.3.1/failsafe-3.3.1.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-java/7.14.0/cucumber-java-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-core/7.14.0/cucumber-core-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-gherkin/7.14.0/cucumber-gherkin-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-gherkin-messages/7.14.0/cucumber-gherkin-messages-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/gherkin/26.2.0/gherkin-26.2.0.jar:/home/ubuntu/.m2/repository/io/cucumber/messages/22.0.0/messages-22.0.0.jar:/home/ubuntu/.m2/repository/io/cucumber/tag-expressions/5.0.6/tag-expressions-5.0.6.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-expressions/16.1.2/cucumber-expressions-16.1.2.jar:/home/ubuntu/.m2/repository/io/cucumber/datatable/7.14.0/datatable-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-plugin/7.14.0/cucumber-plugin-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/docstring/7.14.0/docstring-7.14.0.jar:/home/ubuntu/.m2/repository/io/cucumber/html-formatter/20.4.0/html-formatter-20.4.0.jar:/home/ubuntu/.m2/repository/io/cucumber/junit-xml-formatter/0.2.0/junit-xml-formatter-0.2.0.jar:/home/ubuntu/.m2/repository/io/cucumber/ci-environment/9.2.0/ci-environment-9.2.0.jar:/home/ubuntu/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ubuntu/.m2/repository/io/cucumber/cucumber-testng/7.14.0/cucumber-testng-7.14.0.jar:/home/ubuntu/.m2/repository/org/testng/testng/7.8.0/testng-7.8.0.jar:/home/ubuntu/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar:/home/ubuntu/.m2/repository/org/webjars/jquery/3.6.1/jquery-3.6.1.jar:/home/ubuntu/.m2/repository/net/masterthought/cucumber-reporting/5.7.5/cucumber-reporting-5.7.5.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.13.2.2/jackson-databind-2.13.2.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.13.2/jackson-annotations-2.13.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.13.2/jackson-core-2.13.2.jar:/home/ubuntu/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.2/jackson-datatype-jsr310-2.13.2.jar:/home/ubuntu/.m2/repository/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/ubuntu/.m2/repository/joda-time/joda-time/2.12.2/joda-time-2.12.2.jar:/home/ubuntu/.m2/repository/org/codehaus/plexus/plexus-utils/3.5.0/plexus-utils-3.5.0.jar:/home/ubuntu/.m2/repository/org/jsoup/jsoup/1.15.4/jsoup-1.15.4.jar:/home/ubuntu/.m2/repository/com/googlecode/owasp-java-html-sanitizer/owasp-java-html-sanitizer/20220608.1/owasp-java-html-sanitizer-20220608.1.jar:/home/ubuntu/.m2/repository/commons-configuration/commons-configuration/1.10/commons-configuration-1.10.jar:/home/ubuntu/.m2/repository/commons-lang/commons-lang/2.6/commons-lang-2.6.jar:/home/ubuntu/.m2/repository/com/google/guava/guava/32.1.3-jre/guava-32.1.3-jre.jar:/home/ubuntu/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/home/ubuntu/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/home/ubuntu/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/home/ubuntu/.m2/repository/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0.jar:/home/ubuntu/.m2/repository/com/google/errorprone/error_prone_annotations/2.21.1/error_prone_annotations-2.21.1.jar:/home/ubuntu/.m2/repository/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-classic/1.4.11/logback-classic-1.4.11.jar:/home/ubuntu/.m2/repository/ch/qos/logback/logback-core/1.4.11/logback-core-1.4.11.jar:/home/ubuntu/.m2/repository/org/apache/poi/poi-ooxml/5.2.4/poi-ooxml-5.2.4.jar:/home/ubuntu/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.4/poi-ooxml-lite-5.2.4.jar:/home/ubuntu/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-compress/1.24.0/commons-compress-1.24.0.jar:/home/ubuntu/.m2/repository/com/github/virtuald/curvesapi/1.08/curvesapi-1.08.jar:/home/ubuntu/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/home/ubuntu/.m2/repository/org/apache/poi/poi/5.2.4/poi-5.2.4.jar:/home/ubuntu/.m2/repository/commons-codec/commons-codec/1.16.0/commons-codec-1.16.0.jar:/home/ubuntu/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/ubuntu/.m2/repository/com/zaxxer/SparseBitSet/1.3/SparseBitSet-1.3.jar:/home/ubuntu/.m2/repository/net/sourceforge/jtds/jtds/1.3.1/jtds-1.3.1.jar:/home/ubuntu/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/home/ubuntu/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/ubuntu/.m2/repository/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar:/home/ubuntu/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/home/ubuntu/.m2/repository/org/apache/httpcomponents/httpcore/4.4.16/httpcore-4.4.16.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/ubuntu"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
-    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
-    <property name="java.vm.info" value="mixed mode, sharing"/>
-    <property name="java.version" value="11.0.27"/>
-    <property name="java.vendor" value="Ubuntu"/>
-    <property name="java.specification.maintenance.version" value="3"/>
-    <property name="maven.home" value="/usr/share/maven"/>
-    <property name="file.separator" value="/"/>
+    <property name="appium.newCommandTimeout" value="300"/>
     <property name="java.version.date" value="2025-04-15"/>
+    <property name="java.home" value="/usr/lib/jvm/java-11-openjdk-amd64"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/ubuntu/AfrobeatsAutomation"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="appium.commandTimeout" value="120000"/>
+    <property name="surefire.real.class.path" value="/home/ubuntu/AfrobeatsAutomation/target/surefire/surefirebooter-20250603020057680_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.27+6-post-Ubuntu-0ubuntu122.04"/>
+    <property name="selenium.manager.enabled" value="false"/>
+    <property name="user.name" value="ubuntu"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="5.15.0-1062-aws"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/ubuntu/.m2/repository"/>
+    <property name="cucumber.options" value="--plugin pretty --plugin html:target/cucumber-reports"/>
     <property name="java.vendor.url.bug" value="https://bugs.launchpad.net/ubuntu/+source/openjdk-lts"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="11.0.27"/>
+    <property name="user.dir" value="/home/ubuntu/AfrobeatsAutomation"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Ubuntu"/>
+    <property name="java.vm.version" value="11.0.27+6-post-Ubuntu-0ubuntu122.04"/>
+    <property name="java.specification.maintenance.version" value="3"/>
+    <property name="appium.defaultCommandTimeout" value="120000"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.cpu.endian" value="little"/>
-    <property name="sun.cpu.isalist" value=""/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="maven.test.failure.ignore" value="true"/>
+    <property name="webdriver.http.factory" value="jdk-http-client"/>
   </properties>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.464">
-    <failure type="java.lang.AssertionError:">java.lang.AssertionError: null
+  <testcase name="runScenario[&quot;When the application is launched, title should be &quot;African Kit&quot;&quot;, &quot;Title verification&quot;](1)" classname="main.CucumberRunner" time="3.503">
+    <failure type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
 	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
-	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
-</failure>
-    <system-out><![CDATA[13:01:39.866 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/home/ubuntu/AfrobeatsAutomation/testng.xml"
-Exception: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: An unknown server-side error occurred while processing the command. Original error: Could not find a connected Android device in 20000ms 
-Host info: host: 'chatllm-computer-15309a32a6-569698c75c-l7t6h', ip: '100.124.24.81'
-Build info: version: '4.11.0', revision: '040bc5406b'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-1062-aws', java.version: '11.0.27'
-Driver info: io.appium.java_client.android.AndroidDriver
-Command: [null, newSession {capabilities=[{appium:newCommandTimeout=300, appium:appWaitDuration=30000, appium:appWaitActivity=*, appium:automationName=UiAutomator2, appium:fullReset=false, appium:platformVersion=14.0, appium:uiautomator2ServerReadTimeout=120000, appium:noReset=false, appium:uiautomator2ServerLaunchTimeout=180000, appium:appActivity=com.suenare.iafrobeats.afrobeats.SplashActivity, appium:deviceName=emulator-5554, platformName=ANDROID, appium:app=/home/ubuntu/AfrobeatsAutomation/src/test/resources/installable/app_0304_1.apk, appium:appPackage=com.suenare.iafrobeats.afrobeats, appium:uiautomator2ServerInstallTimeout=180000}], desiredCapabilities=Capabilities {appium:app: /home/ubuntu/AfrobeatsAutom..., appium:appActivity: com.suenare.iafrobeats.afro..., appium:appPackage: com.suenare.iafrobeats.afro..., appium:appWaitActivity: *, appium:appWaitDuration: 30000, appium:automationName: UiAutomator2, appium:deviceName: emulator-5554, appium:fullReset: false, appium:newCommandTimeout: 300, appium:noReset: false, appium:platformVersion: 14.0, appium:uiautomator2ServerInstallTimeout: 180000, appium:uiautomator2ServerLaunchTimeout: 180000, appium:uiautomator2ServerReadTimeout: 120000, platformName: ANDROID}}]
-Capabilities {appium:app: /home/ubuntu/AfrobeatsAutom..., appium:appActivity: com.suenare.iafrobeats.afro..., appium:appPackage: com.suenare.iafrobeats.afro..., appium:appWaitActivity: *, appium:appWaitDuration: 30000, appium:automationName: UiAutomator2, appium:deviceName: emulator-5554, appium:fullReset: false, appium:newCommandTimeout: 300, appium:noReset: false, appium:platformVersion: 14.0, appium:uiautomator2ServerInstallTimeout: 180000, appium:uiautomator2ServerLaunchTimeout: 180000, appium:uiautomator2ServerReadTimeout: 120000, platformName: ANDROID}
+	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:8)
+]]></failure>
+    <system-out><![CDATA[02:00:58.166 [main] DEBUG org.testng.TestNG -- suiteXmlPath: "/home/ubuntu/AfrobeatsAutomation/testng.xml"
+Exception: org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. 
+Host info: host: 'chatllm-computer-15309a32a6-c6c9967c5-tfh5r', ip: '100.111.146.51'
 
-Scenario: When the application is launched, title should be "African Kit" &amp#27;[90m# src/test/resources/features/1_pageTitle.feature:3&amp#27;[0m
+@smoke @critical
+Scenario: When the application is launched, title should be "African Kit" &amp#27;[90m# src/test/resources/features/1_pageTitle.feature:4&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                  &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-13:02:01.553 [main] INFO stepdefinition.PageTitle -- Into App is launched
+02:00:59.677 [TestNG-test=Run All Tests on Android-1] INFO stepdefinition.PageTitle -- Into App is launched
   &amp#27;[32mWhen &amp#27;[0m&amp#27;[32mApp is launched&amp#27;[0m                                                    &amp#27;[90m# stepdefinition.PageTitle.whenAppIsLaunched()&amp#27;[0m
-The element By.id: mainPageTitle is not locatable anymore because its context has been garbage collected
+Exception in verifyPageTitle: The element By.id: mainPageTitle is not locatable anymore because its context has been garbage collected
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mAssert the Page name is African Kit&amp#27;[0m                                &amp#27;[90m# stepdefinition.PageTitle.verifyPageName()&amp#27;[0m
       &amp#27;[31mjava.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
 	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
-	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
+	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:8)
 &amp#27;[0m
 ]]></system-out>
+    <system-err><![CDATA[Jun 03, 2025 2:00:58 AM io.cucumber.core.options.CucumberPropertiesParser lambda$warnWhenCucumberOptionsIsUsed$2
+WARNING: Passing commandline options via the property 'cucumber.options' is no longer supported. Please use individual properties instead. See the java doc on io.cucumber.core.options.Constants for details.
+java.lang.IllegalStateException: The element By.id: mainPageTitle is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gmIY8tjR.getText(Unknown Source)
+	at main.Core.getText(Core.java:110)
+	at pages.MainScreenPage.verifyPageTitle(MainScreenPage.java:35)
+	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66)
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24)
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10)
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84)
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56)
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84)
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75)
+	at io.cucumber.testng.TestNGCucumberRunner.lambda$runScenario$1(TestNGCucumberRunner.java:132)
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
+	at io.cucumber.testng.TestNGCucumberRunner.runScenario(TestNGCucumberRunner.java:129)
+	at io.cucumber.testng.AbstractTestNGCucumberTests.runScenario(AbstractTestNGCucumberTests.java:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+]]></system-err>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.654">
-    <failure message="Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+  <testcase name="runScenario[&quot;When the music is played/paused, progress bar should be enabled/disabled&quot;, &quot;Play &amp; Pause Music&quot;](2)" classname="main.CucumberRunner" time="0.605">
+    <failure message="Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$fPlollhi.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$LYkLoN1g.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: When the music is played/paused, progress bar should be enabled/disabled &amp#27;[90m# src/test/resources/features/2_musicPlayPause.feature:3&amp#27;[0m
 Waiting for application to get launched
@@ -119,7 +170,7 @@ Error clicking music pad: null
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$fPlollhi.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$LYkLoN1g.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
@@ -129,18 +180,18 @@ Error clicking music pad: null
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mMusic should be paused & progress bar should be removed&amp#27;[0m                     &amp#27;[90m# stepdefinition.MusicPlayPause.musicShouldBePuased()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.354">
-    <failure message="Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+  <testcase name="runScenario[&quot;When the music is played/paused for multiple pads, play/pause buttons should be displayed accordingnly&quot;, &quot;Play &amp; Pause Music for multiple pads&quot;](3)" classname="main.CucumberRunner" time="0.431">
+    <failure message="Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$zKvCCmat.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$OX8ffOk1.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: When the music is played/paused for multiple pads, play/pause buttons should be displayed accordingnly &amp#27;[90m# src/test/resources/features/3_multipleMusicPlayPause.feature:3&amp#27;[0m
 Waiting for application to get launched
@@ -153,7 +204,7 @@ Error clicking music pad: null
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$zKvCCmat.get(Unknown Source)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$OX8ffOk1.get(Unknown Source)
 	at pages.MusicPad.playMusic(MusicPad.java:72)
 	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
 	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
@@ -165,19 +216,19 @@ Error clicking music pad: null
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mMusic should be paused & progress bar should be removed&amp#27;[0m                                                   &amp#27;[90m# stepdefinition.MusicPlayPause.musicShouldBePuased()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.191">
-    <failure message="The element By.id: bpmValue is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
+  <testcase name="runScenario[&quot;On moving slider, values should be changed&quot;, &quot;Move slider&quot;](4)" classname="main.CucumberRunner" time="0.258">
+    <failure message="The element By.id: bpmValue is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hgecKOKE.getText(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PRMOOt7C.getText(Unknown Source)
 	at main.Core.getText(Core.java:110)
 	at pages.Slider.openSlider(Slider.java:30)
 	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
 	at ✽.I tap on the number beside the green light on the top left(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/5_slider.feature:6)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: On moving slider, values should be changed                             &amp#27;[90m# src/test/resources/features/5_slider.feature:3&amp#27;[0m
 Waiting for application to get launched
@@ -189,7 +240,7 @@ Waiting for application to get launched
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hgecKOKE.getText(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PRMOOt7C.getText(Unknown Source)
 	at main.Core.getText(Core.java:110)
 	at pages.Slider.openSlider(Slider.java:30)
 	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
@@ -201,19 +252,19 @@ Waiting for application to get launched
   &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mI tap on back button, slider pop up should close&amp#27;[0m                           &amp#27;[90m# stepdefinition.SliderSteps.goBack()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.082">
-    <failure message="The element By.id: volNormButton is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
+  <testcase name="runScenario[&quot;VOL NORM should be enabled/disabled&quot;, &quot;Vol Norm&quot;](5)" classname="main.CucumberRunner" time="0.099">
+    <failure message="The element By.id: volNormButton is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PQujUH6E.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$zBEwNlbI.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
 	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
 	at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/6_volumeNorm.feature:6)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: VOL NORM should be enabled/disabled &amp#27;[90m# src/test/resources/features/6_volumeNorm.feature:3&amp#27;[0m
 Waiting for application to get launched
@@ -225,7 +276,7 @@ Waiting for application to get launched
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$PQujUH6E.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$zBEwNlbI.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
 	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
@@ -238,24 +289,24 @@ Waiting for application to get launched
     <system-err><![CDATA[The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
 ]]></system-err>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.3">
-    <failure message="The element By.id: editPads is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
+  <testcase name="runScenario[&quot;Free samples should be added to music pad&quot;, &quot;Add Free Samples&quot;](6)" classname="main.CucumberRunner" time="0.307">
+    <failure message="The element By.id: editPads is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wzk1W8r5.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$1HhMItvY.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
 	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
 	at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/7_addFreeSamples.feature:5)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: Free samples should be added to music pad                                                                                                                                                                &amp#27;[90m# src/test/resources/features/7_addFreeSamples.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                                                                                                                                                           &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-13:02:03.145 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/txt_editPad
+02:01:04.389 [TestNG-test=Run All Tests on Android-1] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/txt_editPad
 Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/txt_editPad: Input must be set
 Error clicking edit pads: Input must be set
   &amp#27;[31mWhen &amp#27;[0m&amp#27;[31mI tap the Edit page&amp#27;[0m                                                                                                                                                                                         &amp#27;[90m# stepdefinition.AddFreeSamples.iTapOnEditPad()&amp#27;[0m
@@ -265,7 +316,7 @@ Error clicking edit pads: Input must be set
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wzk1W8r5.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$1HhMItvY.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
 	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
@@ -279,15 +330,15 @@ Error clicking edit pads: Input must be set
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mtap to play and tap to stop each loaded pads Assert I can see all icons and each loaded pads are playing audio.&amp#27;[0m                                                                                             &amp#27;[90m# stepdefinition.AddFreeSamples.playAllLoadedMusic()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="5.264">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+  <testcase name="runScenario[&quot;Cart Items should be successfully purchase from Store Screen.&quot;, &quot;purchase Store Items&quot;](7)" classname="main.CucumberRunner" time="5.233">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at stepdefinition.StorePurchase.verifyCartCount(StorePurchase.java:22)
 	at ✽.The assert the store button is showing store count 40(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/8_purchaseStoreItems.feature:6)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: Cart Items should be successfully purchase from Store Screen.            &amp#27;[90m# src/test/resources/features/8_purchaseStoreItems.feature:4&amp#27;[0m
 Waiting for application to get launched
@@ -311,15 +362,15 @@ The element By.id: btnCartCount is not locatable anymore because its context has
   &amp#27;[36mThen &amp#27;[0m&amp#27;[36mAssert all Folder names showing are all contents downloaded from Store page&amp#27;[0m &amp#27;[90m# stepdefinition.StorePurchase.verifyListOnEditPads()&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="2.117">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+  <testcase name="runScenario[&quot;TAP TEMPO Button should be deactivated after tapping on that mutiple times&quot;, &quot;tap on TAP TEMPO Button Multiple times&quot;](8)" classname="main.CucumberRunner" time="2.099">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1578)
 	at org.testng.Assert.assertTrue(Assert.java:57)
 	at org.testng.Assert.assertTrue(Assert.java:67)
 	at stepdefinition.TapTempo.verifyButtonDeactivated(TapTempo.java:35)
 	at ✽.Tap tempo button should be deactivated(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/9_tapTempoButton.feature:8)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: TAP TEMPO Button should be deactivated after tapping on that mutiple times &amp#27;[90m# src/test/resources/features/9_tapTempoButton.feature:4&amp#27;[0m
 Waiting for application to get launched
@@ -340,24 +391,24 @@ The element By.id: bpmValue is not locatable anymore because its context has bee
 &amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="0.805">
-    <failure message="The element By.id: settingButton is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+  <testcase name="runScenario[&quot;Multiple sessions should be added to music pad&quot;, &quot;Add Multiple Sessions&quot;](9)" classname="main.CucumberRunner" time="0.738">
+    <failure message="The element By.id: settingButton is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Y7As7cFe.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hCsqjmXj.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
 	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
 	at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/multipleSessions.feature:6)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: Multiple sessions should be added to music pad                           &amp#27;[90m# src/test/resources/features/multipleSessions.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                           &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-13:02:11.337 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_setting
+02:01:12.461 [TestNG-test=Run All Tests on Android-1] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_setting
 Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/img_setting: Input must be set
 Error in multipleSessionSelected: Input must be set
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mTap on Multiple session button on the top right&amp#27;[0m                             &amp#27;[90m# stepdefinition.AddMultipleSessions.tapOnMultipleSessions()&amp#27;[0m
@@ -367,7 +418,7 @@ Error in multipleSessionSelected: Input must be set
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$Y7As7cFe.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$hCsqjmXj.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
 	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
@@ -376,24 +427,24 @@ Error in multipleSessionSelected: Input must be set
   &amp#27;[36mAnd &amp#27;[0m&amp#27;[36mTap the plus icon create a new Sessions, edit page & repeat scenario &amp#27;[0m&amp#27;[36m&amp#27;[1m5&amp#27;[0m&amp#27;[36m times&amp#27;[0m &amp#27;[90m# stepdefinition.AddMultipleSessions.addSession(int)&amp#27;[0m
 ]]></system-out>
   </testcase>
-  <testcase name="runScenario" classname="main.CucumberRunner" time="1.325">
-    <failure message="The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
+  <testcase name="runScenario[&quot;All created sessiond should be listed in Session screen and Play and Pause for each loaded pads on each sessions pages&quot;, &quot;Verify all added Sessions&quot;](10)" classname="main.CucumberRunner" time="1.113">
+    <failure message="The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected" type="java.lang.IllegalStateException"><![CDATA[java.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
 	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
 	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$i9AgzrjZ.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$jlQgm5n0.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
 	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
 	at ✽.go to Multiple session page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/playAllPads.feature:6)
-</failure>
+]]></failure>
     <system-out><![CDATA[
 Scenario: All created sessiond should be listed in Session screen and Play and Pause for each loaded pads on each sessions pages &amp#27;[90m# src/test/resources/features/playAllPads.feature:3&amp#27;[0m
 Waiting for application to get launched
   &amp#27;[32mGiven &amp#27;[0m&amp#27;[32mI launch the App&amp#27;[0m                                                                                                         &amp#27;[90m# stepdefinition.PageTitle.iLaunchTheApp()&amp#27;[0m
-13:02:12.662 [main] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_menu
+02:01:13.575 [TestNG-test=Run All Tests on Android-1] INFO main.Core -- Finding the Element with Xpath - com.suenare.iafrobeats.afrobeats:id/img_menu
 Error finding and clicking element with ID com.suenare.iafrobeats.afrobeats:id/img_menu: Input must be set
 Error in multipleSessionsList: Input must be set
   &amp#27;[31mThen &amp#27;[0m&amp#27;[31mgo to Multiple session page&amp#27;[0m                                                                                               &amp#27;[90m# stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions()&amp#27;[0m
@@ -403,7 +454,7 @@ Error in multipleSessionsList: Input must be set
 	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
 	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
 	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
-	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$i9AgzrjZ.click(Unknown Source)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$jlQgm5n0.click(Unknown Source)
 	at main.Core.findWebElementByIDAndClick(Core.java:93)
 	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
 	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)

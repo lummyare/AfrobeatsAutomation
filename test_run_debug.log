@@ -1,0 +1,177 @@
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m------------------------< [0;36mAfrobeats:Afrobeats[0;1m >-------------------------[m
+[[1;34mINFO[m] [1mBuilding Afrobeats 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-clean-plugin:2.5:clean[m [1m(default-clean)[m @ [36mAfrobeats[0;1m ---[m
+[[1;34mINFO[m] Deleting /home/ubuntu/AfrobeatsAutomation/target
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:resources[m [1m(default-resources)[m @ [36mAfrobeats[0;1m ---[m
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] skip non existing resourceDirectory /home/ubuntu/AfrobeatsAutomation/src/main/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:compile[m [1m(default-compile)[m @ [36mAfrobeats[0;1m ---[m
+[[1;34mINFO[m] No sources to compile
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-resources-plugin:2.7:testResources[m [1m(default-testResources)[m @ [36mAfrobeats[0;1m ---[m
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;33mWARNING[m] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[[1;34mINFO[m] Copying 14 resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-compiler-plugin:3.7.0:testCompile[m [1m(default-testCompile)[m @ [36mAfrobeats[0;1m ---[m
+[[1;34mINFO[m] Changes detected - recompiling the module!
+[[1;33mWARNING[m] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[[1;34mINFO[m] Compiling 30 source files to /home/ubuntu/AfrobeatsAutomation/target/test-classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mmaven-surefire-plugin:3.0.0-M9:test[m [1m(default-test)[m @ [36mAfrobeats[0;1m ---[m
+[[1;34mINFO[m] Using auto detected provider org.apache.maven.surefire.testng.TestNGProvider
+[[1;34mINFO[m] 
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m]  T E S T S
+[[1;34mINFO[m] -------------------------------------------------------
+[[1;34mINFO[m] Running [1mTestSuite[m
+[[1;31mERROR[m] [1;31mTests [0;1mrun: [0;1m10[m, [1;31mFailures: [0;1;31m10[m, Errors: 0, Skipped: 0, Time elapsed: 12.741 s[1;31m <<< FAILURE![m - in [1mTestSuite[m
+[[1;31mERROR[m] main.CucumberRunner.runScenario["When the application is launched, title should be "African Kit"", "Title verification"](1)  Time elapsed: 0.484 s  <<< FAILURE!
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertTrue(Assert.java:53)
+	at stepdefinition.PageTitle.verifyPageName(PageTitle.java:37)
+	at ✽.Assert the Page name is African Kit(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/1_pageTitle.feature:7)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["When the music is played/paused, progress bar should be enabled/disabled", "Play & Pause Music"](2)  Time elapsed: 0.571 s  <<< FAILURE!
+java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$D4e6rsOL.get(Unknown Source)
+	at pages.MusicPad.playMusic(MusicPad.java:72)
+	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
+	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/2_musicPlayPause.feature:7)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["When the music is played/paused for multiple pads, play/pause buttons should be displayed accordingnly", "Play & Pause Music for multiple pads"](3)  Time elapsed: 0.327 s  <<< FAILURE!
+java.lang.IllegalStateException: Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElements$2(AppiumElementLocator.java:180)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElements(AppiumElementLocator.java:179)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfAListOfElements.call(InterceptorOfAListOfElements.java:46)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at net.bytebuddy.renamed.java.util.ArrayList$ByteBuddy$4ydVNYxP.get(Unknown Source)
+	at pages.MusicPad.playMusic(MusicPad.java:72)
+	at stepdefinition.MusicPlayPause.iTapOnMusicPad(MusicPlayPause.java:23)
+	at ✽.I tap on music pad(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/3_multipleMusicPlayPause.feature:6)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["On moving slider, values should be changed", "Move slider"](4)  Time elapsed: 0.162 s  <<< FAILURE!
+java.lang.IllegalStateException: The element By.id: bpmValue is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$NdHSWqPe.getText(Unknown Source)
+	at main.Core.getText(Core.java:110)
+	at pages.Slider.openSlider(Slider.java:30)
+	at stepdefinition.SliderSteps.iTapOnNumberSlider(SliderSteps.java:21)
+	at ✽.I tap on the number beside the green light on the top left(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/5_slider.feature:6)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["VOL NORM should be enabled/disabled", "Vol Norm"](5)  Time elapsed: 0.062 s  <<< FAILURE!
+java.lang.IllegalStateException: The element By.id: volNormButton is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$p8UCjBZW.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.NormButton.clickOnVolNorm(NormButton.java:30)
+	at stepdefinition.VolNorm.iTapOnVolNorm(VolNorm.java:21)
+	at ✽.I tap the VOL NORM button(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/6_volumeNorm.feature:6)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["Free samples should be added to music pad", "Add Free Samples"](6)  Time elapsed: 0.261 s  <<< FAILURE!
+java.lang.IllegalStateException: The element By.id: editPads is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$gpGi8EYb.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.EditMusicPad.clickEditPads(EditMusicPad.java:61)
+	at stepdefinition.AddFreeSamples.iTapOnEditPad(AddFreeSamples.java:21)
+	at ✽.I tap the Edit page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/7_addFreeSamples.feature:5)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["Cart Items should be successfully purchase from Store Screen.", "purchase Store Items"](7)  Time elapsed: 5.228 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepdefinition.StorePurchase.verifyCartCount(StorePurchase.java:22)
+	at ✽.The assert the store button is showing store count 40(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/8_purchaseStoreItems.feature:6)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["TAP TEMPO Button should be deactivated after tapping on that mutiple times", "tap on TAP TEMPO Button Multiple times"](8)  Time elapsed: 2.095 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at stepdefinition.TapTempo.verifyButtonDeactivated(TapTempo.java:35)
+	at ✽.Tap tempo button should be deactivated(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/9_tapTempoButton.feature:8)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["Multiple sessions should be added to music pad", "Add Multiple Sessions"](9)  Time elapsed: 0.726 s  <<< FAILURE!
+java.lang.IllegalStateException: The element By.id: settingButton is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$1nlB6jzx.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.MultipleSessions.multipleSessionSelected(MultipleSessions.java:50)
+	at stepdefinition.AddMultipleSessions.tapOnMultipleSessions(AddMultipleSessions.java:18)
+	at ✽.Tap on Multiple session button on the top right(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/multipleSessions.feature:6)
+
+[[1;31mERROR[m] main.CucumberRunner.runScenario["All created sessiond should be listed in Session screen and Play and Pause for each loaded pads on each sessions pages", "Verify all added Sessions"](10)  Time elapsed: 1.2 s  <<< FAILURE!
+java.lang.IllegalStateException: The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected
+	at io.appium.java_client.pagefactory.AppiumElementLocator.lambda$findElement$0(AppiumElementLocator.java:154)
+	at java.base/java.util.Optional.orElseThrow(Optional.java:408)
+	at io.appium.java_client.pagefactory.AppiumElementLocator.findElement(AppiumElementLocator.java:153)
+	at io.appium.java_client.pagefactory.interceptors.InterceptorOfASingleElement.call(InterceptorOfASingleElement.java:64)
+	at io.appium.java_client.proxy.Interceptor.intercept(Interceptor.java:78)
+	at org.openqa.selenium.remote.RemoteWebElement$ByteBuddy$wHf6oXRr.click(Unknown Source)
+	at main.Core.findWebElementByIDAndClick(Core.java:93)
+	at pages.MultipleSessionsList.multipleSessionsList(MultipleSessionsList.java:46)
+	at stepdefinition.VerifyMutipleSessions.tapOnMultipleSessions(VerifyMutipleSessions.java:17)
+	at ✽.go to Multiple session page(file:///home/ubuntu/AfrobeatsAutomation/src/test/resources/features/playAllPads.feature:6)
+
+[[1;34mINFO[m] 
+[[1;34mINFO[m] Results:
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mFailures: [m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario » IllegalState The element By.id: burgerMenu is not locatable anymore because its context has been garbage collected[m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario expected [true] but found [false][m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario » IllegalState The element By.id: editPads is not locatable anymore because its context has been garbage collected[m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario » IllegalState The element By.id: settingButton is not locatable anymore because its context has been garbage collected[m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario » IllegalState The element By.id: bpmValue is not locatable anymore because its context has been garbage collected[m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario expected [true] but found [false][m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario » IllegalState The element By.id: volNormButton is not locatable anymore because its context has been garbage collected[m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario[m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario » IllegalState Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected[m
+[[1;31mERROR[m] [1;31m  CucumberRunner.runScenario » IllegalState Elements By.id: musicPadIcon are not locatable anymore because their context has been garbage collected[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] [1;31mTests run: 10, Failures: 10, Errors: 0, Skipped: 0[m
+[[1;34mINFO[m] 
+[[1;31mERROR[m] There are test failures.
+
+Please refer to /home/ubuntu/AfrobeatsAutomation/target/surefire-reports for the individual test results.
+Please refer to dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] [1;32mBUILD SUCCESS[m
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
+[[1;34mINFO[m] Total time:  41.190 s
+[[1;34mINFO[m] Finished at: 2025-06-03T01:56:20Z
+[[1;34mINFO[m] [1m------------------------------------------------------------------------[m
