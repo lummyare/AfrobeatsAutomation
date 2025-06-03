@@ -256,40 +256,124 @@ class CrossPlatformInstaller {
             return;
         }
 
-        const envInstructions = this.getEnvironmentInstructions();
-        console.log(`${colors.yellow}Please add the following to your environment:${colors.reset}`);
-        console.log(envInstructions);
+        if (this.platform === 'windows') {
+            this.setupWindowsEnvironment();
+        } else {
+            this.setupUnixEnvironment();
+        }
     }
 
-    getEnvironmentInstructions() {
-        switch (this.platform) {
-            case 'windows':
-                return `
-Add to your System Environment Variables:
-- JAVA_HOME: Path to your Java installation
-- ANDROID_HOME: Path to your Android SDK
-- Add to PATH: %JAVA_HOME%\\bin, %ANDROID_HOME%\\platform-tools, %ANDROID_HOME%\\tools
+    setupWindowsEnvironment() {
+        console.log(`${colors.yellow}For Windows, please run these PowerShell commands as Administrator:${colors.reset}`);
+        console.log(`[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.x", "Machine")`);
+        console.log(`[Environment]::SetEnvironmentVariable("ANDROID_HOME", "$env:USERPROFILE\\AppData\\Local\\Android\\Sdk", "Machine")`);
+        console.log(`${colors.yellow}Or manually add these to your System Environment Variables through Control Panel${colors.reset}`);
+    }
 
-Or run these PowerShell commands as Administrator:
-[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\\Program Files\\Eclipse Adoptium\\jdk-11.0.x", "Machine")
-[Environment]::SetEnvironmentVariable("ANDROID_HOME", "$env:USERPROFILE\\AppData\\Local\\Android\\Sdk", "Machine")
-`;
-            
-            case 'mac':
-                return `
-Add to your ~/.zshrc or ~/.bash_profile:
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-export ANDROID_HOME=$HOME/Library/Android/sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
-`;
-            
-            case 'linux':
-                return `
-Add to your ~/.bashrc or ~/.profile:
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools
-`;
+    setupUnixEnvironment() {
+        const homeDir = process.env.HOME;
+        if (!homeDir) {
+            console.log(`${colors.red}Error: HOME environment variable not set${colors.reset}`);
+            return;
+        }
+
+        // Detect current shell and determine profile file
+        const shell = process.env.SHELL || '';
+        let profileFile;
+        
+        if (shell.includes('zsh')) {
+            profileFile = path.join(homeDir, '.zshrc');
+        } else if (shell.includes('bash')) {
+            profileFile = path.join(homeDir, '.bash_profile');
+            // Fallback to .bashrc if .bash_profile doesn't exist
+            if (!fs.existsSync(profileFile)) {
+                profileFile = path.join(homeDir, '.bashrc');
+            }
+        } else {
+            // Default fallback
+            profileFile = path.join(homeDir, '.bashrc');
+        }
+
+        console.log(`${colors.blue}Detected shell profile: ${profileFile}${colors.reset}`);
+
+        // Define environment variables based on platform
+        let envVars;
+        if (this.platform === 'mac') {
+            envVars = [
+                'export JAVA_HOME=$(/usr/libexec/java_home -v 11)',
+                'export ANDROID_HOME=$HOME/Library/Android/sdk',
+                'export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools'
+            ];
+        } else { // linux
+            envVars = [
+                'export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64',
+                'export ANDROID_HOME=$HOME/Android/Sdk',
+                'export PATH=$PATH:$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools'
+            ];
+        }
+
+        // Check if variables are already set and add them if not
+        this.addEnvironmentVariables(profileFile, envVars);
+    }
+
+    addEnvironmentVariables(profileFile, envVars) {
+        try {
+            // Read existing profile file content or create empty string if file doesn't exist
+            let profileContent = '';
+            if (fs.existsSync(profileFile)) {
+                profileContent = fs.readFileSync(profileFile, 'utf8');
+            }
+
+            // Check which variables are already present
+            const missingVars = [];
+            const appiumSectionStart = '# Appium Environment Variables - Auto-generated';
+            const appiumSectionEnd = '# End Appium Environment Variables';
+
+            // Remove existing Appium section if present
+            const sectionRegex = new RegExp(`${appiumSectionStart}[\\s\\S]*?${appiumSectionEnd}\\n?`, 'g');
+            profileContent = profileContent.replace(sectionRegex, '');
+
+            // Check which variables are missing (not already manually added)
+            envVars.forEach(envVar => {
+                const varName = envVar.split('=')[0].replace('export ', '');
+                const varRegex = new RegExp(`^\\s*export\\s+${varName}=`, 'm');
+                if (!varRegex.test(profileContent)) {
+                    missingVars.push(envVar);
+                }
+            });
+
+            if (missingVars.length === 0) {
+                console.log(`${colors.green}✓ All environment variables are already configured${colors.reset}`);
+                return;
+            }
+
+            // Add missing variables in a clearly marked section
+            const newSection = [
+                '',
+                appiumSectionStart,
+                ...missingVars,
+                appiumSectionEnd,
+                ''
+            ].join('\n');
+
+            // Append the new section
+            const updatedContent = profileContent + newSection;
+
+            // Write back to file
+            fs.writeFileSync(profileFile, updatedContent, 'utf8');
+
+            console.log(`${colors.green}✓ Added ${missingVars.length} environment variable(s) to ${profileFile}${colors.reset}`);
+            missingVars.forEach(envVar => {
+                console.log(`  ${colors.blue}+ ${envVar}${colors.reset}`);
+            });
+            console.log(`${colors.yellow}Please restart your terminal or run: source ${profileFile}${colors.reset}`);
+
+        } catch (error) {
+            console.error(`${colors.red}Error updating profile file ${profileFile}: ${error.message}${colors.reset}`);
+            console.log(`${colors.yellow}Please manually add these environment variables:${colors.reset}`);
+            envVars.forEach(envVar => {
+                console.log(`  ${envVar}`);
+            });
         }
     }
 
